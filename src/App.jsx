@@ -16,10 +16,9 @@ function App() {
   }, []);
 
   const handleChoice = (choice) => {
-    // guardar elección
+    //Guarda elección
     setHistory((prev) => [...prev, { type: "choice", choice }]);
 
-    // item
     if (choice.givesItem) {
       if (!inventory.includes(choice.givesItem)) {
         setInventory((prev) => [...prev, choice.givesItem]);
@@ -29,20 +28,17 @@ function App() {
         setUsedChoices((prev) => [...prev, choice.id]);
       }
 
-      // evento de item
       setHistory((prev) => [...prev, { type: "item", item: choice.givesItem }]);
 
       return;
     }
 
-    // consumir
     if (choice.consumesItem) {
       setInventory((prev) =>
         prev.filter((item) => item !== choice.consumesItem),
       );
     }
 
-    // avanzar
     setCurrentScene(choice.next);
 
     setHistory((prev) => [...prev, { type: "scene", sceneId: choice.next }]);

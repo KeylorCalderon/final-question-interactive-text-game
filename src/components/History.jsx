@@ -16,12 +16,8 @@ function History({ history, language }) {
       {history.map((entry, index) => {
         const isLast = index === history.length - 1;
 
-        // ❗ SOLO animar si:
-        // - es el último
-        // - NO cambió idioma
         const shouldAnimate = isLast && !languageChanged;
 
-        // 🟡 SCENE
         if (entry.type === "scene") {
           const text = scenes[entry.sceneId].text[language];
 
@@ -32,12 +28,10 @@ function History({ history, language }) {
           );
         }
 
-        // 🔵 CHOICE (sin animación)
         if (entry.type === "choice") {
           return <p key={index}>{"> " + entry.choice.text[language]}</p>;
         }
 
-        // 🟢 ITEM (sí animación)
         if (entry.type === "item") {
           const itemName = itemTranslations[entry.item][language];
 
