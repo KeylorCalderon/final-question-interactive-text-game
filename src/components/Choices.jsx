@@ -1,6 +1,8 @@
-function Choices({ choices, onSelect, inventory }) {
+import { itemTranslations } from "../data";
+
+function Choices({ choices, onSelect, inventory, language }) {
   if (!choices.length) {
-    return <p></p>;
+    return <p>Fin de la historia.</p>;
   }
 
   return (
@@ -16,8 +18,11 @@ function Choices({ choices, onSelect, inventory }) {
             disabled={isLocked}
             style={{ display: "block", margin: "1rem 0" }}
           >
-            {choice.text}
-            {isLocked && ` (necesitas ${choice.requiresItem})`}
+            {choice.text[language]}
+            {isLocked &&
+              ` (${language === "es" ? "necesitas" : "you need"} ${
+                itemTranslations[choice.requiresItem][language]
+              })`}
           </button>
         );
       })}
