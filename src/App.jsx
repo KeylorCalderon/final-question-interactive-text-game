@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { scenes } from "./data";
+import OptionSelector from "./components/OptionSelector";
 
 function App() {
   const [currentScene, setCurrentScene] = useState(1);
@@ -7,7 +8,11 @@ function App() {
   const scene = scenes[currentScene];
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+    <>
+      <div>
+        <OptionSelector />
+      </div>
+
       <h1>Juego de Novela</h1>
 
       <p>{scene.text}</p>
@@ -23,7 +28,7 @@ function App() {
           </button>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
