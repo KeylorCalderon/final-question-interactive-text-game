@@ -9,6 +9,8 @@ function App() {
   const [usedChoices, setUsedChoices] = useState([]);
   const [history, setHistory] = useState([]);
   const [language, setLanguage] = useState("es");
+  const [isTyping, setIsTyping] = useState(false);
+  const [skipTyping, setSkipTyping] = useState(false);
 
   //Inicializa la historia
   useEffect(() => {
@@ -51,16 +53,30 @@ function App() {
   );
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+    <div
+      style={{ padding: "2rem", fontFamily: "sans-serif" }}
+      onClick={() => {
+        if (isTyping) {
+          setSkipTyping(true);
+        }
+      }}
+    >
       <h1>THE FINAL QUESTION</h1>
 
-      <History history={history} language={language} />
+      <History
+        history={history}
+        language={language}
+        setIsTyping={setIsTyping}
+        skipTyping={skipTyping}
+        setSkipTyping={setSkipTyping}
+      />
 
       <Choices
         choices={visibleChoices}
         onSelect={handleChoice}
         inventory={inventory}
         language={language}
+        isTyping={isTyping}
       />
 
       <div>

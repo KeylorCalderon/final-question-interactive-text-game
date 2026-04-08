@@ -3,7 +3,13 @@ import TypingText from "./TypingText";
 import { scenes } from "../data";
 import { itemTranslations } from "../data";
 
-function History({ history, language }) {
+function History({
+  history,
+  language,
+  setIsTyping,
+  skipTyping,
+  setSkipTyping,
+}) {
   const prevLanguage = useRef(language);
   const languageChanged = prevLanguage.current !== language;
 
@@ -23,7 +29,13 @@ function History({ history, language }) {
 
           return (
             <p key={index}>
-              <TypingText text={text} animate={shouldAnimate} />
+              <TypingText
+                text={text}
+                animate={shouldAnimate}
+                setIsTyping={setIsTyping}
+                skipTyping={skipTyping}
+                setSkipTyping={setSkipTyping}
+              />
             </p>
           );
         }
@@ -42,7 +54,13 @@ function History({ history, language }) {
 
           return (
             <p key={index}>
-              <TypingText text={text} animate={shouldAnimate} />
+              <TypingText
+                text={text}
+                animate={shouldAnimate}
+                setIsTyping={setIsTyping}
+                skipTyping={skipTyping}
+                setSkipTyping={setSkipTyping}
+              />
             </p>
           );
         }

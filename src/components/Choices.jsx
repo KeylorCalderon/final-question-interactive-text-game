@@ -1,8 +1,12 @@
 import { itemTranslations } from "../data";
 
-function Choices({ choices, onSelect, inventory, language }) {
+function Choices({ choices, onSelect, inventory, language, isTyping }) {
+  if (isTyping) {
+    return null;
+  }
+
   if (!choices.length) {
-    return <p></p>;
+    return <p>Fin de la historia.</p>;
   }
 
   return (
@@ -16,7 +20,11 @@ function Choices({ choices, onSelect, inventory, language }) {
             key={index}
             onClick={() => onSelect(choice)}
             disabled={isLocked}
-            style={{ display: "block", margin: "1rem 0" }}
+            style={{
+              display: "block",
+              margin: "1rem 0",
+              opacity: isLocked ? 0.5 : 1,
+            }}
           >
             {choice.text[language]}
             {isLocked &&
