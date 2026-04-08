@@ -12,18 +12,14 @@ function App() {
 
   //Inicializa la historia
   useEffect(() => {
-    const firstScene = scenes[1];
-    setHistory([{ type: "scene", text: firstScene.text[language] }]);
-  }, [language]);
+    setHistory([{ type: "scene", sceneId: 1 }]);
+  }, []);
 
   const handleChoice = (choice) => {
-    //Agrega decisión al historial
-    setHistory((prev) => [
-      ...prev,
-      { type: "choice", text: choice.text[language] },
-    ]);
+    // guardar elección
+    setHistory((prev) => [...prev, { type: "choice", choice }]);
 
-    //Da un item
+    // item
     if (choice.givesItem) {
       if (!inventory.includes(choice.givesItem)) {
         setInventory((prev) => [...prev, choice.givesItem]);
@@ -33,35 +29,23 @@ function App() {
         setUsedChoices((prev) => [...prev, choice.id]);
       }
 
-      setHistory((prev) => [
-        ...prev,
-        {
-          type: "scene",
-          text:
-            language === "es"
-              ? `Has obtenido: ${itemTranslations[choice.givesItem][language]}`
-              : `You got: ${itemTranslations[choice.givesItem][language]}`,
-        },
-      ]);
+      // evento de item
+      setHistory((prev) => [...prev, { type: "item", item: choice.givesItem }]);
 
       return;
     }
 
-    //Consume el item
+    // consumir
     if (choice.consumesItem) {
       setInventory((prev) =>
         prev.filter((item) => item !== choice.consumesItem),
       );
     }
 
-    //Avanza a la siguiente scene
-    const nextScene = scenes[choice.next];
+    // avanzar
     setCurrentScene(choice.next);
 
-    setHistory((prev) => [
-      ...prev,
-      { type: "scene", text: nextScene.text[language] },
-    ]);
+    setHistory((prev) => [...prev, { type: "scene", sceneId: choice.next }]);
   };
 
   const scene = scenes[currentScene];

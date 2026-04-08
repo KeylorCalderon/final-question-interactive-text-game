@@ -1,10 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 
-function TypingText({ text, speed = 40 }) {
+function TypingText({ text, speed = 40, animate = true }) {
   const [displayedText, setDisplayedText] = useState("");
   const indexRef = useRef(0);
 
   useEffect(() => {
+    if (!animate) {
+      setDisplayedText(text);
+      return;
+    }
+
     setDisplayedText("");
     indexRef.current = 0;
 
