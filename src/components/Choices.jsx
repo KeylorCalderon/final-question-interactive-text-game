@@ -6,7 +6,7 @@ function Choices({ choices, onSelect, inventory, language, isTyping }) {
   }
 
   if (!choices.length) {
-    return <p>Fin de la historia.</p>;
+    return <p>---</p>;
   }
 
   return (

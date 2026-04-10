@@ -50,7 +50,28 @@ function TypingText({
     }
   }, [skipTyping, text]);
 
-  return <span style={{ whiteSpace: "pre-line" }}>{displayedText}</span>;
+  function renderStyledText(text) {
+    const parts = text.split(/(<red>.*?<\/red>)/g);
+
+    return parts.map((part, index) => {
+      if (part.startsWith("<red>")) {
+        const content = part.replace(/<\/?red>/g, "");
+        return (
+          <span key={index} style={{ color: "red" }}>
+            {content}
+          </span>
+        );
+      }
+
+      return <span key={index}>{part}</span>;
+    });
+  }
+
+  return (
+    <span style={{ whiteSpace: "pre-line" }}>
+      {renderStyledText(displayedText)}
+    </span>
+  );
 }
 
 export default TypingText;

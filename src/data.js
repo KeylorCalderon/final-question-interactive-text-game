@@ -2,8 +2,8 @@ export const scenes = {
   1: {
     id: 1,
     text: {
-          es: "Tu nave espacial está abandonada...\n\nEl silencio es absoluto.\nAlgo no está bien.",
-          en: "Your spaceship is abandoned...\n\nThe silence is absolute.\nSomething is not right."
+          es: "Tu nave espacial está abandonada...\n\nEl silencio es absoluto.\nAlgo no está bien.<red>cerrada</red>",
+          en: "Your spaceship is abandoned...\n\nThe silence is absolute.\nSomething is not right.<red>closedY61<<663/red>"
         },
     choices: [
       {
