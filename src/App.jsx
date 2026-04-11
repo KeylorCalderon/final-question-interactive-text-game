@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { scenes, itemTranslations } from "./data";
+import { scenes, itemTranslations } from "./data/scenes/scenes_index";
 import Choices from "./components/Choices";
 import History from "./components/History";
 
 function App() {
-  const [currentScene, setCurrentScene] = useState(1);
+  const [currentScene, setCurrentScene] = useState("000_intro_start");
   const [inventory, setInventory] = useState([]);
   const [usedChoices, setUsedChoices] = useState([]);
   const [history, setHistory] = useState([]);
@@ -14,7 +14,7 @@ function App() {
 
   //Inicializa la historia
   useEffect(() => {
-    setHistory([{ type: "scene", sceneId: 1 }]);
+    setHistory([{ type: "scene", sceneId: "000_intro_start" }]);
   }, []);
 
   const handleChoice = (choice) => {

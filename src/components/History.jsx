@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import TypingText from "./TypingText";
-import { scenes } from "../data";
-import { itemTranslations } from "../data";
+import { scenes, itemTranslations } from "../data/scenes/scenes_index";
 
 function History({
   history,

@@ -1,4 +1,4 @@
-import { itemTranslations } from "../data";
+import { itemTranslations } from "../data/scenes/scenes_index";
 
 function Choices({ choices, onSelect, inventory, language, isTyping }) {
   if (isTyping) {
