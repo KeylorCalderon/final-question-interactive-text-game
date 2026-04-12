@@ -59,46 +59,75 @@ function TypingText({
       strong: { fontWeight: "bold" },
     };
 
-    function parseText(input) {
-      const result = [];
-      let i = 0;
-      const len = input.length;
+    const root = [];
+    const stack = [{ children: root }];
 
-      while (i < len) {
-        if (input[i] === "<" && input[i + 1] !== "/") {
-          const match = input.slice(i).match(/^<(\w+)>/);
-          if (match) {
-            const tagName = match[1];
-            const style = tagMap[tagName];
-            if (style) {
-              const closingTag = `</${tagName}>`;
-              const endIndex = input.indexOf(closingTag, i + match[0].length);
+    let i = 0;
+    let buffer = "";
 
-              if (endIndex !== -1) {
-                const innerText = input.slice(i + match[0].length, endIndex);
-
-                result.push(
-                  <span key={result.length} style={style}>
-                    {parseText(innerText)}
-                  </span>,
-                );
-                i = endIndex + closingTag.length;
-                continue;
-              }
-            }
-          }
-        }
-        let j = i;
-        while (j < len && input[j] !== "<") j++;
-        if (j > i) {
-          result.push(input.slice(i, j));
-        }
-        i = j;
+    function flushText() {
+      if (buffer) {
+        stack[stack.length - 1].children.push(buffer);
+        buffer = "";
       }
-      return result;
     }
 
-    return parseText(text);
+    while (i < text.length) {
+      if (text[i] === "<") {
+        //Flush pending text before the tag
+        flushText();
+
+        const isClosing = text[i + 1] === "/";
+        const match = text.slice(i).match(/^<\/?(\w+)>/);
+
+        if (!match) {
+          buffer += text[i];
+          i++;
+          continue;
+        }
+
+        const tag = match[1];
+        const fullTag = match[0];
+
+        //Opening tags
+        if (!isClosing && tagMap[tag]) {
+          const node = { tag, children: [] };
+          stack[stack.length - 1].children.push(node);
+          stack.push(node);
+          i += fullTag.length;
+          continue;
+        }
+
+        //The closing tags
+        if (isClosing && stack.length > 1) {
+          const current = stack[stack.length - 1];
+          if (current.tag === tag) {
+            stack.pop();
+            i += fullTag.length;
+            continue;
+          }
+        }
+      }
+
+      buffer += text[i];
+      i++;
+    }
+
+    flushText();
+
+    function build(nodes) {
+      return nodes.map((node, idx) => {
+        if (typeof node === "string") return node;
+
+        return (
+          <span key={idx} style={tagMap[node.tag]}>
+            {build(node.children)}
+          </span>
+        );
+      });
+    }
+
+    return build(root);
   }
 
   return (
