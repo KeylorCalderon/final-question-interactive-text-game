@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { scenes, itemTranslations } from "./data/scenes/scenes_index";
 import Choices from "./components/Choices";
 import History from "./components/History";
+import GlitchText from "./components/GlitchText";
+import Galaxy from "./components/Galaxy";
+import "./styles.css";
 
 function App() {
   const [currentScene, setCurrentScene] = useState("000_intro_start");
@@ -54,41 +57,50 @@ function App() {
 
   return (
     <div
-      style={{ padding: "2rem", fontFamily: "sans-serif" }}
+      style={{ position: "relative", width: "100%", height: "100vh" }}
       onClick={() => {
         if (isTyping) {
           setSkipTyping(true);
         }
       }}
     >
-      <h1>THE FINAL QUESTION</h1>
-
-      <History
-        history={history}
-        language={language}
-        setIsTyping={setIsTyping}
-        skipTyping={skipTyping}
-        setSkipTyping={setSkipTyping}
+      <Galaxy
+        density={1}
+        glowIntensity={0.3}
+        saturation={0}
+        hueShift={140}
+        twinkleIntensity={0.3}
+        rotationSpeed={0.1}
+        repulsionStrength={2}
+        autoCenterRepulsion={0}
+        starSpeed={0.5}
+        speed={1}
       />
-
-      <Choices
-        choices={visibleChoices}
-        onSelect={handleChoice}
-        inventory={inventory}
-        language={language}
-        isTyping={isTyping}
-      />
-
-      <div>
-        <h3>Inventario:</h3>
-        <ul>
-          {inventory.map((item, index) => (
-            <li key={index}>{itemTranslations[item][language]}</li>
-          ))}
-        </ul>
+      <div className="ui">
+        <GlitchText>THE FINAL QUESTION</GlitchText>
+        <div className="history">
+          <History
+            history={history}
+            language={language}
+            setIsTyping={setIsTyping}
+            skipTyping={skipTyping}
+            setSkipTyping={setSkipTyping}
+          />
+        </div>
+        <div className="choices">
+          <Choices
+            choices={visibleChoices}
+            onSelect={handleChoice}
+            inventory={inventory}
+            language={language}
+            isTyping={isTyping}
+          />
+        </div>
+        <div className="languages">
+          <button onClick={() => setLanguage("es")}>ES</button>
+          <button onClick={() => setLanguage("en")}>EN</button>
+        </div>
       </div>
-      <button onClick={() => setLanguage("es")}>ES</button>
-      <button onClick={() => setLanguage("en")}>EN</button>
     </div>
   );
 }
