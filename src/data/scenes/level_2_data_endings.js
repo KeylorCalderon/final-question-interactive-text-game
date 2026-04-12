@@ -16,9 +16,7 @@ export const secondLevelScenesEndings = {
         Notas que ha vuelto a estar en perfecto estado, de un blanco puro.
         Un paisaje tan hermoso y brillante que cuesta creer que exista fuera de una pintura es captado por tus ojos...
 
-        Antes de cerrarse para siempre.
-
-        `,
+        Antes de cerrarse para siempre.`,
       en: `With the little strength you have left, you cross the first door.
 
         It is daytime in the field again.
@@ -33,9 +31,7 @@ export const secondLevelScenesEndings = {
         You notice that the latter has returned to being in perfect condition, with a pure white.
         A landscape so beautiful and bright that it is hard to believe it exists outside of a painting is captured by your eyes...
 
-        Before they close forever.
-
-        `
+        Before they close forever.`
     },
     choices: []
   },

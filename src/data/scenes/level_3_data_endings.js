@@ -615,5 +615,14 @@ export const thirdLevelScenesEndings = {
         In this world without purpose... you do not die, you simply <strong>cease to be relevant.</strong>`
     },
     choices: []
+  },
+
+  "∞_impossible_ending": {
+    id: "∞_impossible_ending",
+    text: {
+      es: `<i>«Detesto a los tramposos.»</i>`,
+      en: `<i>«I hate cheaters.»</i>`
+    },
+    choices: []
   }
 };

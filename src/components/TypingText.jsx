@@ -51,20 +51,54 @@ function TypingText({
   }, [skipTyping, text]);
 
   function renderStyledText(text) {
-    const parts = text.split(/(<red>.*?<\/red>)/g);
+    const tagMap = {
+      red: { color: "red" },
+      green: { color: "limegreen" },
+      blue: { color: "blue" },
+      i: { fontStyle: "italic" },
+      strong: { fontWeight: "bold" },
+    };
 
-    return parts.map((part, index) => {
-      if (part.startsWith("<red>")) {
-        const content = part.replace(/<\/?red>/g, "");
-        return (
-          <span key={index} style={{ color: "red" }}>
-            {content}
-          </span>
-        );
+    function parseText(input) {
+      const result = [];
+      let i = 0;
+      const len = input.length;
+
+      while (i < len) {
+        if (input[i] === "<" && input[i + 1] !== "/") {
+          const match = input.slice(i).match(/^<(\w+)>/);
+          if (match) {
+            const tagName = match[1];
+            const style = tagMap[tagName];
+            if (style) {
+              const closingTag = `</${tagName}>`;
+              const endIndex = input.indexOf(closingTag, i + match[0].length);
+
+              if (endIndex !== -1) {
+                const innerText = input.slice(i + match[0].length, endIndex);
+                // Recursión para manejar nesting
+                result.push(
+                  <span key={result.length} style={style}>
+                    {parseText(innerText)}
+                  </span>,
+                );
+                i = endIndex + closingTag.length;
+                continue;
+              }
+            }
+          }
+        }
+        let j = i;
+        while (j < len && input[j] !== "<") j++;
+        if (j > i) {
+          result.push(input.slice(i, j));
+        }
+        i = j;
       }
+      return result;
+    }
 
-      return <span key={index}>{part}</span>;
-    });
+    return parseText(text);
   }
 
   return (
