@@ -114,7 +114,7 @@ export const firstLevelScenes = {
         Cost: 2 lines.
         
         Gray Door: Ignore them completely.
-        Gain: 2 lines.\
+        Gain: 2 lines.
         
         The weight of millions of tiny lives now rests upon your shoulders.
 
@@ -153,8 +153,8 @@ export const firstLevelScenes = {
       },
       {
         text: {
-          es: "Cruzar la puerta",
-          en: "Cross the door"
+          es: "Cruzar la puerta gris",
+          en: "Cross the gray door"
         },
         next: "001_004_gray_choice",
         givesLines: 2
