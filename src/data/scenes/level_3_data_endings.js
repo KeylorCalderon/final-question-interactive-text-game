@@ -617,11 +617,15 @@ export const thirdLevelScenesEndings = {
     choices: []
   },
 
-  "∞_impossible_ending": {
-    id: "∞_impossible_ending",
+  "000_impossible_ending": {
+    id: "000_impossible_ending",
     text: {
-      es: `<i>«Detesto a los tramposos.»</i>`,
-      en: `<i>«I hate cheaters.»</i>`
+      es: `...
+      ...
+      <i>«Detesto a los tramposos.»</i>`,
+      en: `...
+      ...
+      <i>«I hate cheaters.»</i>`
     },
     choices: []
   }

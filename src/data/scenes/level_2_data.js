@@ -2,7 +2,7 @@ export const secondLevelScenes = {
   "001_002_001_understand_or_survive": {
     id: "001_002_001_understand_or_survive",
     text: {
-      es: `Cruzas la puerta azul.
+      es: `Cruzas la puerta verde.
 
         Te encuentras ahora en una central energética decorada con numerosos artefactos religiosos.
 
@@ -52,7 +52,7 @@ export const secondLevelScenes = {
         Puerta Gris 2: Deben comprender.
 
         `,
-      en: `You cross the blue door.
+      en: `You cross the green door.
 
         You now find yourself in an energy plant decorated with numerous religious artifacts.
 
@@ -327,7 +327,7 @@ export const secondLevelScenes = {
           es: "Cruzar la puerta azul",
           en: "Cross the blue door"
         },
-        next: "∞_impossible_ending",
+        next: "000_impossible_ending",
         requiresLines: 7
       },
       {

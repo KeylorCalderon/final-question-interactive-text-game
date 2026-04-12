@@ -76,7 +76,7 @@ function TypingText({
 
               if (endIndex !== -1) {
                 const innerText = input.slice(i + match[0].length, endIndex);
-                // Recursión para manejar nesting
+
                 result.push(
                   <span key={result.length} style={style}>
                     {parseText(innerText)}
