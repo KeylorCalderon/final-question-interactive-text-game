@@ -94,17 +94,17 @@ export const thirdLevelScenesEndings = {
         Más generaciones pasan, y los Jhunuh comienzan a explorar su propio sistema solar.
         Poco después, se aventuran a las otras estellas.
 
-        Te sientes débil, lo has estado observando por lo que parecieron siglos.
+        Te sientes débil, los has estado observando por lo que parecieron siglos.
         Tu última línea comienza a desvanecerse.
         Te preparas para cerrar los ojos por última vez...
 
         Hasta que en tu cabeza resuena.
 
-        <i>«Muy bien.»</i>
-        <i>«Alcanzaron las estrellas.»</i>
+        <i><entity>Muy bien.</entity></i>
+        <i><entity>Alcanzaron las estrellas.</entity></i>
 
-        <i>«Felicidades.»</i>
-        <i><strong>«Has ganado.»</strong></i>
+        <i><entity>Felicidades.</entity></i>
+        <i><strong><entity>Has ganado.</entity></strong></i>
 
         El brazalete en tu mano vuelve a marcar 10 líneas, antes de desvanecerse por completo.
         Frente a ti se abre una puerta hecha de luz.
@@ -133,17 +133,17 @@ export const thirdLevelScenesEndings = {
         More generations pass, and the Jhunuh begin to explore their own solar system.
         Shortly after, they venture to other stars.
 
-        You feel weak, you have been observing it for what felt like centuries.
+        You feel weak, you have been watching them for what seems like centuries.
         Your last line begins to fade.
         You prepare to close your eyes for the last time...
 
         Until it echoes in your head.
 
-        <i>«Very well.»</i>
-        <i>«They reached the stars.»</i>
+        <i><entity>Very well.</entity></i>
+        <i><entity>They reached the stars.</entity></i>
 
-        <i>«Congratulations.»</i>
-        <i><strong>«You have won.»</strong></i>
+        <i><entity>Congratulations.</entity></i>
+        <i><strong><entity>You have won.</entity></strong></i>
 
         The bracelet on your hand marks 10 lines again, before fading away completely.
         In front of you, a door made of light opens.
@@ -183,26 +183,26 @@ export const thirdLevelScenesEndings = {
         Una semilla logra germinar en una estrella distante.
         Su civilización vuelve a nacer.
 
-        <i>«Muy bien.»</i>
-        <i>«Alcanzaron las estrellas.»</i>
+        <i><entity>Muy bien.</entity></i>
+        <i><entity>Alcanzaron las estrellas.</entity></i>
 
-        <i>«Felicidades.»</i>
-        <i><strong>«Has ganado.»</strong></i>
+        <i><entity>Felicidades.</entity></i>
+        <i><strong><entity>Has ganado.</entity></strong></i>
 
         El brazalete en tu mano vuelve a marcar 10 líneas, antes de desvanecerse por completo.
 
-        <i>«Parece ser que en esta ocasión no ha habido tiempo para la <strong>pregunta final</strong>.»</i>
+        <i><entity>Parece ser que en esta ocasión no ha habido tiempo para la <strong>pregunta final</strong>.</entity></i>
 
-        <i>«...»</i>
+        <i><entity>...</entity></i>
 
-        <i>«Qué mal.»</i>
+        <i><entity>Qué mal.</entity></i>
 
         Frente a ti se abre una puerta hecha de luz.
 
-        <i>«Bueno… ahí está tu salida.»</i>
+        <i><entity>Bueno… ahí está tu salida.</entity></i>
 
-        <i>«Pero me preguntaba si, antes de irte…»</i>
-        <i>«Te gustaría tomar un poco de té.»</i>`,
+        <i><entity>Pero me preguntaba si, antes de irte…</entity></i>
+        <i><entity>Te gustaría tomar un poco de té.</entity></i>`,
       en: `You cross the green door.
 
         You find yourself in a large white room. In the center, there is a small round table and two chairs.
@@ -230,26 +230,26 @@ export const thirdLevelScenesEndings = {
         One seed manages to take root in a distant star.
         Their civilization is born again.
 
-        <i>«Very well.»</i>
-        <i>«They reached the stars.»</i>
+        <i><entity>Very well.</entity></i>
+        <i><entity>They reached the stars.</entity></i>
 
-        <i>«Congratulations.»</i>
-        <i><strong>«You have won.»</strong></i>
+        <i><entity>Congratulations.</entity></i>
+        <i><strong><entity>You have won.</entity></strong></i>
 
         The bracelet on your hand marks 10 lines again, before fading away completely.
 
-        <i>«It seems that on this occasion there has been no time for the <strong>final question</strong>.»</i>
+        <i><entity>It seems that on this occasion there has been no time for the <strong>final question</strong>.</entity></i>
 
-        <i>«...»</i>
+        <i><entity>...</entity></i>
 
-        <i>«What a shame.»</i>
+        <i><entity>What a shame.</entity></i>
 
         In front of you, a door made of light opens.
 
-        <i>«Well… there is your exit.»</i>
+        <i><entity>Well… there is your exit.</entity></i>
 
-        <i>«But I was wondering if, before you leave…»</i>
-        <i>«You would like to have some tea.»</i>`
+        <i><entity>But I was wondering if, before you leave…</entity></i>
+        <i><entity>You would like to have some tea.</entity></i>`
     },
     choices: []
   },
@@ -264,17 +264,17 @@ export const thirdLevelScenesEndings = {
         Es la primera vez que los miras en persona, son más pequeños de lo que imaginaste, alcanzando difícilmente los 50 centímetros.
         Millones de ojos confundidos poco a poco se posan sobre ti, y sus expresiones cambian de asombro a ira, e incluso terror.
 
-        <i>«Son todos los Jhunuh que murieron en diferentes épocas por tus elecciones.»</i>
+        <i><entity>Son todos los Jhunuh que murieron en diferentes épocas por tus elecciones.</entity></i>
 
-        <i>«Revivieron solamente para juzgarte.»</i>
+        <i><entity>Revivieron solamente para juzgarte.</entity></i>
 
-        <i>«Ahora son conscientes de tus acciones.»</i>
+        <i><entity>Ahora son conscientes de tus acciones.</entity></i>
 
-        <i>«Conscientes de que pudiste elegir otros caminos.»</i>
+        <i><entity>Conscientes de que pudiste elegir otros caminos.</entity></i>
 
-        <i>«Pero quizás pensaste que este era el que merecían.»</i>
+        <i><entity>Pero quizás pensaste que este era el que merecían.</entity></i>
 
-        <i>«Serán ellos quienes elegirán tu destino.»</i>
+        <i><entity>Serán ellos quienes elegirán tu destino.</entity></i>
 
         Al inicio todo es caos, gritos, miedo y rabia inundan el lugar.
         Pero poco a poco… se organizan.
@@ -307,17 +307,17 @@ export const thirdLevelScenesEndings = {
         It is the first time you see them in person, they are smaller than you imagined, barely reaching 50 centimeters.
         Millions of confused eyes gradually turn toward you, and their expressions shift from astonishment to anger, and even terror.
 
-        <i>«They are all the Jhunuh who died in different eras because of your choices.»</i>
+        <i><entity>They are all the Jhunuh who died in different eras because of your choices.</entity></i>
 
-        <i>«They were brought back only to judge you.»</i>
+        <i><entity>They were brought back only to judge you.</entity></i>
 
-        <i>«They are now aware of your actions.»</i>
+        <i><entity>They are now aware of your actions.</entity></i>
 
-        <i>«Aware that you could have chosen other paths.»</i>
+        <i><entity>Aware that you could have chosen other paths.</entity></i>
 
-        <i>«But perhaps you thought this was what they deserved.»</i>
+        <i><entity>But perhaps you thought this was what they deserved.</entity></i>
 
-        <i>«They are the ones who will choose your fate.»</i>
+        <i><entity>They are the ones who will choose your fate.</entity></i>
 
         At first, everything is chaos, screams, fear, and rage flood the place.
         But little by little… they organize.
@@ -375,31 +375,31 @@ export const thirdLevelScenesEndings = {
 
         Una de ellas da un paso al frente.
 
-        «No hicimos nada.»
+        <entity>No hicimos nada.</entity>
 
         Otra responde, desde algún lugar imposible de ubicar.
 
-        «Sí lo hicimos.»
+        <entity>Sí lo hicimos.</entity>
 
-        «Elegimos.»
+        <entity>Elegimos.</entity>
 
-        «Era necesario.»
+        <entity>Era necesario.</entity>
 
-        «Era evitable.»
+        <entity>Era evitable.</entity>
 
-        «No era nuestra responsabilidad.»
+        <entity>No era nuestra responsabilidad.</entity>
 
-        «Sí lo era.»
+        <entity>Sí lo era.</entity>
 
-        «Ni siquiera sabemos quien somos.»
+        <entity>Ni siquiera sabemos quien somos.</entity>
 
-        «Nos obligaron a hacerlo.»
+        <entity>Nos obligaron a hacerlo.</entity>
 
-        «Pudimos elegir.»
+        <entity>Pudimos elegir.</entity>
 
-        «Sí era nuestra responsabilidad.»
+        <entity>Sí era nuestra responsabilidad.</entity>
 
-        «No lo era.»
+        <entity>No lo era.</entity>
 
         En medio de ese mar de voces, todas las versiones extienden sus brazos y se acercan a ti.
         El blanco mundo en el que flotas se oscurece.
@@ -430,31 +430,31 @@ export const thirdLevelScenesEndings = {
 
         One of them steps forward.
 
-        «We did nothing.»
+        <entity>We did nothing.</entity>
 
         Another responds, from somewhere impossible to locate.
 
-        «Yes, we did.»
+        <entity>Yes, we did.</entity>
 
-        «We chose.»
+        <entity>We chose.</entity>
 
-        «It was necessary.»
+        <entity>It was necessary.</entity>
 
-        «It was avoidable.»
+        <entity>It was avoidable.</entity>
 
-        «It was not our responsibility.»
+        <entity>It was not our responsibility.</entity>
 
-        «Yes, it was.»
+        <entity>Yes, it was.</entity>
 
-        «We do not even know who we are.»
+        <entity>We do not even know who we are.</entity>
 
-        «We were forced to do it.»
+        <entity>We were forced to do it.</entity>
 
-        «We could have chosen.»
+        <entity>We could have chosen.</entity>
 
-        «Yes, it was our responsibility.»
+        <entity>Yes, it was our responsibility.</entity>
 
-        «No, it was not.»
+        <entity>No, it was not.</entity>
 
         In the midst of that sea of voices, all the versions extend their arms and move toward you.
         The white world in which you float darkens.
@@ -471,40 +471,40 @@ export const thirdLevelScenesEndings = {
 
         Te encuentras de nuevo en el campo en el cual despertaste.
 
-        <i>«¿Por qué debería juzgarte?»</i>
+        <i><entity>¿Por qué debería juzgarte?</entity></i>
 
-        <i>«Fui yo quien creó las condiciones.»</i>
-        <i>«Fui yo quien permitió el escenario.»</i>
+        <i><entity>Fui yo quien creó las condiciones.</entity></i>
+        <i><entity>Fui yo quien permitió el escenario.</entity></i>
 
-        <i>«Tú solo respondiste.»</i>
+        <i><entity>Tú solo respondiste.</entity></i>
 
-        <i>«No haces nada que no haya visto antes.»</i>
-        <i>«No eres especialmente diferente.»</i>
+        <i><entity>No haces nada que no haya visto antes.</entity></i>
+        <i><entity>No eres especialmente diferente.</entity></i>
 
-        <i>«No tengo interés en juzgar.»</i>
-        <i>«No cambia los resultados.»</i>
+        <i><entity>No tengo interés en juzgar.</entity></i>
+        <i><entity>No cambia los resultados.</entity></i>
 
-        <i>«Aún tienes líneas.»</i>
-        <i>«Hay más "juegos" por jugar.»</i>`,
+        <i><entity>Aún tienes líneas.</entity></i>
+        <i><entity>Hay más "juegos" por jugar.</entity></i>`,
       en: `You cross the third door.
 
         You find yourself once again in the field where you awakened.
 
-        <i>«Why should I judge you?»</i>
+        <i><entity>Why should I judge you?</entity></i>
 
-        <i>«It was I who created the conditions.»</i>
-        <i>«It was I who allowed the scenario.»</i>
+        <i><entity>It was I who created the conditions.</entity></i>
+        <i><entity>It was I who allowed the scenario.</entity></i>
 
-        <i>«You only responded.»</i>
+        <i><entity>You only responded.</entity></i>
 
-        <i>«You do nothing that I have not seen before.»</i>
-        <i>«You are not particularly different.»</i>
+        <i><entity>You do nothing that I have not seen before.</entity></i>
+        <i><entity>You are not particularly different.</entity></i>
 
-        <i>«I have no interest in judging.»</i>
-        <i>«It does not change the results.»</i>
+        <i><entity>I have no interest in judging.</entity></i>
+        <i><entity>It does not change the results.</entity></i>
 
-        <i>«You still have lines.»</i>
-        <i>«There are more "games" to play.»</i>`
+        <i><entity>You still have lines.</entity></i>
+        <i><entity>There are more "games" to play.</entity></i>`
     },
     choices: []
   },
@@ -523,13 +523,13 @@ export const thirdLevelScenesEndings = {
         Sus ojos negros se posan sobre ti con temor y atisbos de curiosidad.
         Pero su expresión comienza a cambiar...
 
-        <i>«Lo saben.»</i>
+        <i><entity>Lo saben.</entity></i>
 
         Los Jhunuh comienzan a avanzar hacia ti.
 
-        <i>«Observaste.»</i>
-        <i>«Comprendiste.»</i>
-        <i>«Y elegiste no actuar.»</i>
+        <i><entity>Observaste.</entity></i>
+        <i><entity>Comprendiste.</entity></i>
+        <i><entity>Y elegiste no actuar.</entity></i>
         Tu brazalete pierde una línea.
         Luego otra.
         Y otra.
@@ -553,13 +553,13 @@ export const thirdLevelScenesEndings = {
         Their black eyes rest on you with fear and hints of curiosity.
         But their expression begins to change...
 
-        <i>«They know.»</i>
+        <i><entity>They know.</entity></i>
 
         The Jhunuh begin to move toward you.
 
-        <i>«You observed.»</i>
-        <i>«You understood.»</i>
-        <i>«And you chose not to act.»</i>
+        <i><entity>You observed.</entity></i>
+        <i><entity>You understood.</entity></i>
+        <i><entity>And you chose not to act.</entity></i>
         Your bracelet loses a line.
         Then another.
         And another.
@@ -581,7 +581,7 @@ export const thirdLevelScenesEndings = {
     text: {
       es: `En el momento en que tocas la tercera puerta esta se desmaterializa junto al resto.
 
-        <i>«Es verdad, nada importa.»</i>
+        <i><entity>Es verdad, nada importa.</entity></i>
 
         La esfera absorbe el campo verde y el cielo despejado de tu alrededor.
         Solo queda un suelo incoloro que parece ser infinito, bajo un cielo igual de blanco.
@@ -598,7 +598,7 @@ export const thirdLevelScenesEndings = {
         En este mundo sin propósito... no mueres, simplemente <strong>dejas de ser relevante.</strong>`,
       en: `The moment you touch the third door, it dematerializes along with the rest.
 
-        <i>«It is true, nothing matters.»</i>
+        <i><entity>It is true, nothing matters.</entity></i>
 
         The sphere absorbs the green field and the clear sky around you.
         Only a colorless ground remains, seemingly infinite, beneath an equally white sky.
@@ -622,10 +622,10 @@ export const thirdLevelScenesEndings = {
     text: {
       es: `...
       ...
-      <i>«Detesto a los tramposos.»</i>`,
+      <i><entity>Detesto a los tramposos.</entity></i>`,
       en: `...
       ...
-      <i>«I hate cheaters.»</i>`
+      <i><entity>I hate cheaters.</entity></i>`
     },
     choices: []
   }

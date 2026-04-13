@@ -33,17 +33,17 @@ export const secondLevelScenes = {
         Eventualmente, todos miran al cielo, esperando un nuevo <strong>milagro</strong>.
         Te esperan a ti.
 
-        <i>«Pero con las líneas que te quedan. No hay mucho que su "dios" pueda lograr. ¿No es así?»</i>
+        <i><entity>Pero con las líneas que te quedan. No hay mucho que su "dios" pueda lograr. ¿No es así?</entity></i>
 
-        <i>«Les enseñaste, y aún así, desaprovecharon la oportunidad que les diste.»</i>
-        <i>«Pensaron que siempre estarías allí para instruirlos.»</i>
+        <i><entity>Les enseñaste, y aún así, desaprovecharon la oportunidad que les diste.</entity></i>
+        <i><entity>Pensaron que siempre estarías allí para instruirlos.</entity></i>
 
-        <i>«...»</i>
-        <i>«Incluso los dioses deben responder»</i>
-        <i>«Es momento de la <strong>pregunta final</strong>»</i>
+        <i><entity>...</entity></i>
+        <i><entity>Incluso los dioses deben responder</entity></i>
+        <i><entity>Es momento de la <strong>pregunta final</strong></entity></i>
 
-        <i>«Después de todo…»</i>
-        <i>«¿Deben sobrevivir… aunque nunca comprendan… o comprender… aunque no todos sobrevivan?»</i>
+        <i><entity>Después de todo…</entity></i>
+        <i><entity>¿Deben sobrevivir… aunque nunca comprendan… o comprender… aunque no todos sobrevivan?</entity></i>
 
         Se materializan tres puertas ante ti.
 
@@ -83,17 +83,17 @@ export const secondLevelScenes = {
         Eventually, everyone looks to the sky, waiting for a new <strong>miracle</strong>.
         They are waiting for you.
 
-        <i>«But with the lines you have left. There is not much your "god" can achieve. Is that not so?»</i>
+        <i><entity>But with the lines you have left. There is not much your "god" can achieve. Is that not so?</entity></i>
 
-        <i>«You taught them, and even so, they wasted the opportunity you gave them.»</i>
-        <i>«They thought you would always be there to instruct them.»</i>
+        <i><entity>You taught them, and even so, they wasted the opportunity you gave them.</entity></i>
+        <i><entity>They thought you would always be there to instruct them.</entity></i>
 
-        <i>«...»</i>
-        <i>«Even gods must answer»</i>
-        <i>«It is time for the <strong>final question</strong>»</i>
+        <i><entity>...</entity></i>
+        <i><entity>Even gods must answer</entity></i>
+        <i><entity>It is time for the <strong>final question</strong></entity></i>
 
-        <i>«After all…»</i>
-        <i>«Should they survive… even if they never understand… or understand… even if not all survive?»</i>
+        <i><entity>After all…</entity></i>
+        <i><entity>Should they survive… even if they never understand… or understand… even if not all survive?</entity></i>
 
         Three doors materialize before you.
 
@@ -274,8 +274,8 @@ export const secondLevelScenes = {
 
         Retrasaste el evento, pero no eliminaste.
 
-        <i>«Te quedan pocas líneas.»</i>
-        <i>«Tus opciones se limitan.»</i>
+        <i><entity>Te quedan pocas líneas.</entity></i>
+        <i><entity>Tus opciones se limitan.</entity></i>
 
         Ante ti, se materializan dos puertas.
 
@@ -308,8 +308,8 @@ export const secondLevelScenes = {
 
         You delayed the event, but you did not eliminate it.
 
-        <i>«You have few lines left.»</i>
-        <i>«Your options are limited.»</i>
+        <i><entity>You have few lines left.</entity></i>
+        <i><entity>Your options are limited.</entity></i>
 
         Before you, two doors materialize.
 
@@ -366,12 +366,12 @@ export const secondLevelScenes = {
         No por ética...
         Por terror.
 
-        <i>«Has decidido actuar como un juez sobre los Jhunuh...»</i>
-        <i>«Pero incluso los jueces deben ser <strong>juzgados</strong>.»</i>
+        <i><entity>Has decidido actuar como un juez sobre los Jhunuh...</entity></i>
+        <i><entity>Pero incluso los jueces deben ser <strong>juzgados</strong>.</entity></i>
 
-        <i>«Es momento de la <strong>pregunta final</strong>»</i>
+        <i><entity>Es momento de la <strong>pregunta final</strong></entity></i>
 
-        <i>«¿Quién deseas que te juzgue?»</i>
+        <i><entity>¿Quién deseas que te juzgue?</entity></i>
 
         Se materializan tres puertas ante ti.
 
@@ -404,12 +404,12 @@ export const secondLevelScenes = {
         Not because of ethics...
         Because of terror.
 
-        <i>«You have chosen to act as a judge over the Jhunuh...»</i>
-        <i>«But even judges must be <strong>judged</strong>.»</i>
+        <i><entity>You have chosen to act as a judge over the Jhunuh...</entity></i>
+        <i><entity>But even judges must be <strong>judged</strong>.</entity></i>
 
-        <i>«It is time for the <strong>final question</strong>»</i>
+        <i><entity>It is time for the <strong>final question</strong></entity></i>
 
-        <i>«Who do you wish to judge you?»</i>
+        <i><entity>Who do you wish to judge you?</entity></i>
 
         Three doors materialize before you.
 
@@ -468,13 +468,13 @@ export const secondLevelScenes = {
         Incluso si llegaran a lograr el fin de su viaje, no disponían de la tecnología necesaria para sobrevivir en ese planeta.
         Solo era un intento desesperado de enviar una semilla al cosmos... que jamás lograría germinar.
 
-        <i>«Te negaste a participar en el desarrollo de su civilización, y ahora enfrentan una muerte inevitable.»</i>
-        <i>«¿Podría decirse que es realmente tu culpa?»</i>
-        <i>«Dejaste que el destino siguiera su curso, cobrando miles de millones de vidas, junto a siglos de historia y progreso.»</i>
-        <i>«¿Es responsabilidad tuya la situación que les ha ocurrido?»</i>
-        <i>«De todas formas, tu inacción no te excenta de la <strong>pregunta final</strong>»</i>
+        <i><entity>Te negaste a participar en el desarrollo de su civilización, y ahora enfrentan una muerte inevitable.</entity></i>
+        <i><entity>¿Podría decirse que es realmente tu culpa?</entity></i>
+        <i><entity>Dejaste que el destino siguiera su curso, cobrando miles de millones de vidas, junto a siglos de historia y progreso.</entity></i>
+        <i><entity>¿Es responsabilidad tuya la situación que les ha ocurrido?</entity></i>
+        <i><entity>De todas formas, tu inacción no te excenta de la <strong>pregunta final</strong></entity></i>
 
-        <i><strong>«¿Por qué no los ayudaste?»</strong></i>
+        <i><strong><entity>¿Por qué no los ayudaste?</entity></strong></i>
 
         Se materializan tres puertas ante ti.
 
@@ -504,13 +504,13 @@ export const secondLevelScenes = {
         Even if they managed to reach the end of their journey, they did not have the necessary technology to survive on that planet.
         It was only a desperate attempt to send a seed into the cosmos... one that would never manage to take root.
 
-        <i>«You refused to participate in the development of their civilization, and now they face an inevitable death.»</i>
-        <i>«Could it be said that it is truly your fault?»</i>
-        <i>«You let fate follow its course, claiming billions of lives, along with centuries of history and progress.»</i>
-        <i>«Is the situation that has happened to them your responsibility?»</i>
-        <i>«In any case, your inaction does not exempt you from the <strong>final question</strong>»</i>
+        <i><entity>You refused to participate in the development of their civilization, and now they face an inevitable death.</entity></i>
+        <i><entity>Could it be said that it is truly your fault?</entity></i>
+        <i><entity>You let fate follow its course, claiming billions of lives, along with centuries of history and progress.</entity></i>
+        <i><entity>Is the situation that has happened to them your responsibility?</entity></i>
+        <i><entity>In any case, your inaction does not exempt you from the <strong>final question</strong></entity></i>
 
-        <i><strong>«Why did you not help them?»</strong></i>
+        <i><strong><entity>Why did you not help them?</entity></strong></i>
 
         Three doors materialize before you.
 

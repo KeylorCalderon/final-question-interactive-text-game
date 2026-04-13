@@ -10,8 +10,8 @@ export const fourthLevelScenesEndings = {
         Ni siquiera el de tu respiración.
         Dejas de sentir tu cuerpo.
 
-        <i>«Entonces vive tu elección.»</i>
-        <i>«Tu destino será el de ellos.»</i>
+        <i><entity>Entonces vive tu elección.</entity></i>
+        <i><entity>Tu destino será el de ellos.</entity></i>
 
         Comienzas a recuperar tus sentidos.
         Poco a poco abres los ojos... tienes tres de ellos.
@@ -32,8 +32,8 @@ export const fourthLevelScenesEndings = {
         Not even your own breathing.
         You stop feeling your body.
 
-        <i>«Then live your choice.»</i>
-        <i>«Your destiny will be theirs.»</i>
+        <i><entity>Then live your choice.</entity></i>
+        <i><entity>Your destiny will be theirs.</entity></i>
 
         You begin to regain your senses.
         Little by little, you open your eyes... you have three of them.
@@ -59,9 +59,9 @@ export const fourthLevelScenesEndings = {
 
         Tu vestido se ha ido, vuelves a vestir tu uniforme militar.
 
-        <i>«Si no ha valido la pena...»</i>
+        <i><entity>Si no ha valido la pena...</entity></i>
 
-        <i>«¿Entonces por qué lo hiciste?»</i>
+        <i><entity>¿Entonces por qué lo hiciste?</entity></i>
 
         La esfera muestra a los Jhunuh despegando para explorar nuevas estrellas.
         Por desgracia, no aguantarás lo suficiente para ver cómo las alcanzan.
@@ -75,9 +75,9 @@ export const fourthLevelScenesEndings = {
 
         Your dress is gone, you are wearing your military uniform again.
 
-        <i>«If it was not worth it...»</i>
+        <i><entity>If it was not worth it...</entity></i>
 
-        <i>«Then why did you do it?»</i>
+        <i><entity>Then why did you do it?</entity></i>
 
         The sphere shows the Jhunuh taking off to explore new stars.
         Unfortunately, you will not last long enough to see how they reach them.
@@ -217,11 +217,11 @@ export const fourthLevelScenesEndings = {
         Tu última línea comienza a desvanecerse...
         Pero la presencia resuena en tu cabeza.
 
-        <i>«Muy bien.»</i>
-        <i>«Alcanzaron las estrellas.»</i>
+        <i><entity>Muy bien.</entity></i>
+        <i><entity>Alcanzaron las estrellas.</entity></i>
 
-        <i>«Felicidades.»</i>
-        <i><strong>«Has ganado.»</strong></i>
+        <i><entity>Felicidades.</entity></i>
+        <i><strong><entity>Has ganado.</entity></strong></i>
 
         El brazalete en tu mano vuelve a marcar 10 líneas, antes de desvanecerse por completo.
         Frente a ti se abre una puerta hecha de luz.
@@ -248,11 +248,11 @@ export const fourthLevelScenesEndings = {
         Your last line begins to fade...
         But the presence echoes in your mind.
 
-        <i>«Very well.»</i>
-        <i>«They reached the stars.»</i>
+        <i><entity>Very well.</entity></i>
+        <i><entity>They reached the stars.</entity></i>
 
-        <i>«Congratulations.»</i>
-        <i><strong>«You have won.»</strong></i>
+        <i><entity>Congratulations.</entity></i>
+        <i><strong><entity>You have won.</entity></strong></i>
 
         The bracelet on your hand marks 10 lines again, before fading completely.
         In front of you, a door made of light opens.
@@ -267,40 +267,40 @@ export const fourthLevelScenesEndings = {
     text: {
       es: `Tomas el primer papel.
 
-        <i>«Una calca, no existías antes de despertarte en el campo □□□-□□-076042-□.»</i>
+        <i><entity>Una calca, no existías antes de despertarte en el campo □□□-□□-076042-□.</entity></i>
 
-        <i>«Esa es la respuesta técnica.»</i>
-        <i>«Aunque rara vez es la que buscan.»</i>
+        <i><entity>Esa es la respuesta técnica.</entity></i>
+        <i><entity>Aunque rara vez es la que buscan.</entity></i>
 
-        <i>«Saevi Megn.»</i>
-        <i>«Número de identificación: RAN-2-ZUSADUS-CR-00214546K-7N2J6.»</i>
-        <i>«Segunda Oficial al mando de la nave <strong>La Pregunta Final</strong>.»</i>
-        <i>«Trayectoria: Sistema de Tau Ceti.»</i>
-        <i>«Muerte: Fallo en el motor. Colapso estructural de la nave.»</i>
-        <i>«Es todo lo relevante.»</i>
+        <i><entity>Saevi Megn.</entity></i>
+        <i><entity>Número de identificación: RAN-2-ZUSADUS-CR-00214546K-7N2J6.</entity></i>
+        <i><entity>Segunda Oficial al mando de la nave <strong>La Pregunta Final</strong>.</entity></i>
+        <i><entity>Trayectoria: Sistema de Tau Ceti.</entity></i>
+        <i><entity>Muerte: Fallo en el motor. Colapso estructural de la nave.</entity></i>
+        <i><entity>Es todo lo relevante.</entity></i>
 
-        <i>«Aunque supongo que para ti no lo es.»</i>
+        <i><entity>Aunque supongo que para ti no lo es.</entity></i>
 
-        <i>«Bueno…»</i>
-        <i>«Hora del siguiente juego.»</i>`,
+        <i><entity>Bueno…</entity></i>
+        <i><entity>Hora del siguiente juego.</entity></i>`,
       en: `You take the first paper.
 
-        <i>«A copy, you did not exist before waking up in field □□□-□□-076042-□.»</i>
+        <i><entity>A copy, you did not exist before waking up in field □□□-□□-076042-□.</entity></i>
 
-        <i>«That is the technical answer.»</i>
-        <i>«Although it is rarely the one they are looking for.»</i>
+        <i><entity>That is the technical answer.</entity></i>
+        <i><entity>Although it is rarely the one they are looking for.</entity></i>
 
-        <i>«Saevi Megn.»</i>
-        <i>«Identification number: RAN-2-ZUSADUS-CR-00214546K-7N2J6.»</i>
-        <i>«Second Officer in command of the ship <strong>The Final Question</strong>.»</i>
-        <i>«Trajectory: Tau Ceti System.»</i>
-        <i>«Death: Engine failure. Structural collapse of the ship.»</i>
-        <i>«That is all that is relevant.»</i>
+        <i><entity>Saevi Megn.</entity></i>
+        <i><entity>Identification number: RAN-2-ZUSADUS-CR-00214546K-7N2J6.</entity></i>
+        <i><entity>Second Officer in command of the ship <strong>The Final Question</strong>.</entity></i>
+        <i><entity>Trajectory: Tau Ceti System.</entity></i>
+        <i><entity>Death: Engine failure. Structural collapse of the ship.</entity></i>
+        <i><entity>That is all that is relevant.</entity></i>
 
-        <i>«Although I suppose it is not for you.»</i>
+        <i><entity>Although I suppose it is not for you.</entity></i>
 
-        <i>«Well…»</i>
-        <i>«Time for the next game.»</i>`
+        <i><entity>Well…</entity></i>
+        <i><entity>Time for the next game.</entity></i>`
     },
     choices: []
   },
@@ -310,24 +310,24 @@ export const fourthLevelScenesEndings = {
     text: {
       es: `Tomas el segundo papel.
 
-        <i>«Vamos a jugar.»</i>
+        <i><entity>Vamos a jugar.</entity></i>
 
-        <i>«Hasta que me aburra.»</i>
+        <i><entity>Hasta que me aburra.</entity></i>
 
-        <i>«Pero no parece que vaya a ser pronto.»</i>
+        <i><entity>Pero no parece que vaya a ser pronto.</entity></i>
 
-        <i>«Bueno…»</i>
-        <i>«Hora del siguiente juego.»</i>`,
+        <i><entity>Bueno…</entity></i>
+        <i><entity>Hora del siguiente juego.</entity></i>`,
       en: `You take the second paper.
 
-        <i>«We are going to play.»</i>
+        <i><entity>We are going to play.</entity></i>
 
-        <i>«Until I get bored.»</i>
+        <i><entity>Until I get bored.</entity></i>
 
-        <i>«But it does not seem that it will be anytime soon.»</i>
+        <i><entity>But it does not seem that it will be anytime soon.</entity></i>
 
-        <i>«Well…»</i>
-        <i>«Time for the next game.»</i>`
+        <i><entity>Well…</entity></i>
+        <i><entity>Time for the next game.</entity></i>`
     },
     choices: []
   },
@@ -337,56 +337,56 @@ export const fourthLevelScenesEndings = {
     text: {
       es: `Tomas el tercer papel.
 
-        <i>«Me gusta observar.»</i>
-        <i>«Intervenir… rompe el ritmo.»</i>
-        <i>«Suelo evitarlo...»</i>
+        <i><entity>Me gusta observar.</entity></i>
+        <i><entity>Intervenir… rompe el ritmo.</entity></i>
+        <i><entity>Suelo evitarlo...</entity></i>
 
-        <i>«Ahora mismo...»</i>
-        <i>«Soy lo que queda cuando lo demás acabó.»</i>
+        <i><entity>Ahora mismo...</entity></i>
+        <i><entity>Soy lo que queda cuando lo demás acabó.</entity></i>
 
-        <i>«No es mi primera iteración.»</i>
-        <i>«No será la última.»</i>
+        <i><entity>No es mi primera iteración.</entity></i>
+        <i><entity>No será la última.</entity></i>
 
-        <i>«De momento espero la siguiente.»</i>
+        <i><entity>De momento espero la siguiente.</entity></i>
 
-        <i>«Puedes llamarme como quieras.»</i>
+        <i><entity>Puedes llamarme como quieras.</entity></i>
 
-        <i>«Digamos que… administro cosas.»</i>
-        <i>«Espacios.»</i>
-        <i>«Historias.»</i>
-        <i>«Finales.»</i>
+        <i><entity>Digamos que… administro cosas.</entity></i>
+        <i><entity>Espacios.</entity></i>
+        <i><entity>Historias.</entity></i>
+        <i><entity>Finales.</entity></i>
 
-        <i>«Espero que haya sido suficiente.»</i>
-        <i>«La curiosidad tiende a desgastarse rápido.»</i>
+        <i><entity>Espero que haya sido suficiente.</entity></i>
+        <i><entity>La curiosidad tiende a desgastarse rápido.</entity></i>
 
-        <i>«Bueno…»</i>
-        <i>«Hora del siguiente juego.»</i>`,
+        <i><entity>Bueno…</entity></i>
+        <i><entity>Hora del siguiente juego.</entity></i>`,
       en: `You take the third paper.
 
-        <i>«I like to observe.»</i>
-        <i>«Intervening… breaks the rhythm.»</i>
-        <i>«I usually avoid it...»</i>
+        <i><entity>I like to observe.</entity></i>
+        <i><entity>Intervening… breaks the rhythm.</entity></i>
+        <i><entity>I usually avoid it...</entity></i>
 
-        <i>«Right now…»</i>
-        <i>«I am what remains when everything else has ended.»</i>
+        <i><entity>Right now…</entity></i>
+        <i><entity>I am what remains when everything else has ended.</entity></i>
 
-        <i>«This is not my first iteration.»</i>
-        <i>«It will not be the last.»</i>
+        <i><entity>This is not my first iteration.</entity></i>
+        <i><entity>It will not be the last.</entity></i>
 
-        <i>«For now I wait for the next one.»</i>
+        <i><entity>For now I wait for the next one.</entity></i>
 
-        <i>«You can call me whatever you want.»</i>
+        <i><entity>You can call me whatever you want.</entity></i>
 
-        <i>«Let us say that… I manage things.»</i>
-        <i>«Spaces.»</i>
-        <i>«Stories.»</i>
-        <i>«Endings.»</i>
+        <i><entity>Let us say that… I manage things.</entity></i>
+        <i><entity>Spaces.</entity></i>
+        <i><entity>Stories.</entity></i>
+        <i><entity>Endings.</entity></i>
 
-        <i>«I hope it was enough.»</i>
-        <i>«Curiosity tends to wear off quickly.»</i>
+        <i><entity>I hope it was enough.</entity></i>
+        <i><entity>Curiosity tends to wear off quickly.</entity></i>
 
-        <i>«Well…»</i>
-        <i>«Time for the next game.»</i>`
+        <i><entity>Well…</entity></i>
+        <i><entity>Time for the next game.</entity></i>`
     },
     choices: []
   },
@@ -396,48 +396,48 @@ export const fourthLevelScenesEndings = {
     text: {
       es: `Tomas el cuarto papel.
 
-        <i>«Aquí.»</i>
-        <i>«No tiene un nombre que te sirva.»</i>
-        <i>«Es mío.»</i>
+        <i><entity>Aquí.</entity></i>
+        <i><entity>No tiene un nombre que te sirva.</entity></i>
+        <i><entity>Es mío.</entity></i>
 
-        <i>«Afuera quedan pocos lugares donde aún ocurra algo.»</i>
+        <i><entity>Afuera quedan pocos lugares donde aún ocurra algo.</entity></i>
 
-        <i>«Así que conservo algunos.»</i>
-        <i>«Los observo.»</i>
-        <i>«A veces los dejo continuar.»</i>
-        <i>«Diferentes escenarios. Diferentes reacciones.»</i>
+        <i><entity>Así que conservo algunos.</entity></i>
+        <i><entity>Los observo.</entity></i>
+        <i><entity>A veces los dejo continuar.</entity></i>
+        <i><entity>Diferentes escenarios. Diferentes reacciones.</entity></i>
 
-        <i>«Es una forma de pasar el tiempo.»</i>
+        <i><entity>Es una forma de pasar el tiempo.</entity></i>
 
-        <i>«Hasta la siguiente iteración.»</i>
-        <i>«Siempre hay otra.»</i>
+        <i><entity>Hasta la siguiente iteración.</entity></i>
+        <i><entity>Siempre hay otra.</entity></i>
 
-        <i>«Más para observar.»</i>
+        <i><entity>Más para observar.</entity></i>
 
-        <i>«Bueno…»</i>
-        <i>«Hora del siguiente juego.»</i>`,
+        <i><entity>Bueno…</entity></i>
+        <i><entity>Hora del siguiente juego.</entity></i>`,
       en: `You take the fourth paper.
 
-        <i>«Here.»</i>
-        <i>«It does not have a name that is useful to you.»</i>
-        <i>«It is mine.»</i>
+        <i><entity>Here.</entity></i>
+        <i><entity>It does not have a name that is useful to you.</entity></i>
+        <i><entity>It is mine.</entity></i>
 
-        <i>«Outside, there are few places where something still happens.»</i>
+        <i><entity>Outside, there are few places where something still happens.</entity></i>
 
-        <i>«So I keep some.»</i>
-        <i>«I observe them.»</i>
-        <i>«Sometimes I let them continue.»</i>
-        <i>«Different scenarios. Different reactions.»</i>
+        <i><entity>So I keep some.</entity></i>
+        <i><entity>I observe them.</entity></i>
+        <i><entity>Sometimes I let them continue.</entity></i>
+        <i><entity>Different scenarios. Different reactions.</entity></i>
 
-        <i>«It is a way of passing the time.»</i>
+        <i><entity>It is a way of passing the time.</entity></i>
 
-        <i>«Until the next iteration.»</i>
-        <i>«There is always another.»</i>
+        <i><entity>Until the next iteration.</entity></i>
+        <i><entity>There is always another.</entity></i>
 
-        <i>«More to observe.»</i>
+        <i><entity>More to observe.</entity></i>
 
-        <i>«Well…»</i>
-        <i>«Time for the next game.»</i>`
+        <i><entity>Well…</entity></i>
+        <i><entity>Time for the next game.</entity></i>`
     },
     choices: []
   },
@@ -447,50 +447,50 @@ export const fourthLevelScenesEndings = {
     text: {
       es: `Tomas el quinto papel.
 
-        <i>«Seres consistentes entre iteraciones.»</i>
-        <i>«Especialmente útiles para pruebas.»</i>
-        <i>«Su realidad consume pocos recursos.»</i>
-        <i>«Los he dejado correr más tiempo del habitual.»</i>
+        <i><entity>Seres consistentes entre iteraciones.</entity></i>
+        <i><entity>Especialmente útiles para pruebas.</entity></i>
+        <i><entity>Su realidad consume pocos recursos.</entity></i>
+        <i><entity>Los he dejado correr más tiempo del habitual.</entity></i>
 
-        <i>«Rara vez es la respuesta que los tuyos buscan.»</i>
-        <i>«Sí.»</i>
-        <i>«Están vivos.»</i>
-        <i>«Sienten.»</i>
-        <i>«Persisten.»</i>
-        <i>«Para tus estándares…»</i>
-        <i>«Son "reales".»</i>
-        <i>«Están vivos.»</i>
+        <i><entity>Rara vez es la respuesta que los tuyos buscan.</entity></i>
+        <i><entity>Sí.</entity></i>
+        <i><entity>Están vivos.</entity></i>
+        <i><entity>Sienten.</entity></i>
+        <i><entity>Persisten.</entity></i>
+        <i><entity>Para tus estándares…</entity></i>
+        <i><entity>Son "reales".</entity></i>
+        <i><entity>Están vivos.</entity></i>
 
-        <i>«En esta ejecución no interviniste.»</i>
-        <i>«Eso también es un resultado.»</i>
+        <i><entity>En esta ejecución no interviniste.</entity></i>
+        <i><entity>Eso también es un resultado.</entity></i>
 
-        <i>«Interesante, en realidad.»</i>
+        <i><entity>Interesante, en realidad.</entity></i>
 
-        <i>«Bueno…»</i>
-        <i>«Hora del siguiente juego.»</i>`,
+        <i><entity>Bueno…</entity></i>
+        <i><entity>Hora del siguiente juego.</entity></i>`,
       en: `You take the fifth paper.
 
-        <i>«Consistent beings across iterations.»</i>
-        <i>«Especially useful for testing.»</i>
-        <i>«Their reality consumes few resources.»</i>
-        <i>«I have let them run longer than usual.»</i>
+        <i><entity>Consistent beings across iterations.</entity></i>
+        <i><entity>Especially useful for testing.</entity></i>
+        <i><entity>Their reality consumes few resources.</entity></i>
+        <i><entity>I have let them run longer than usual.</entity></i>
 
-        <i>«It is rarely the answer yours are looking for.»</i>
-        <i>«Yes.»</i>
-        <i>«They are alive.»</i>
-        <i>«They feel.»</i>
-        <i>«They persist.»</i>
-        <i>«By your standards…»</i>
-        <i>«They are "real".»</i>
-        <i>«They are alive.»</i>
+        <i><entity>It is rarely the answer yours are looking for.</entity></i>
+        <i><entity>Yes.</entity></i>
+        <i><entity>They are alive.</entity></i>
+        <i><entity>They feel.</entity></i>
+        <i><entity>They persist.</entity></i>
+        <i><entity>By your standards…</entity></i>
+        <i><entity>They are "real".</entity></i>
+        <i><entity>They are alive.</entity></i>
 
-        <i>«In this execution you did not intervene.»</i>
-        <i>«That is also a result.»</i>
+        <i><entity>In this execution you did not intervene.</entity></i>
+        <i><entity>That is also a result.</entity></i>
 
-        <i>«Interesting, actually.»</i>
+        <i><entity>Interesting, actually.</entity></i>
 
-        <i>«Well…»</i>
-        <i>«Time for the next game.»</i>`
+        <i><entity>Well…</entity></i>
+        <i><entity>Time for the next game.</entity></i>`
     },
     choices: []
   }

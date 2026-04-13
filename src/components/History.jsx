@@ -5,6 +5,7 @@ import { scenes, itemTranslations } from "../data/scenes/scenes_index";
 function History({
   history,
   language,
+  isTyping,
   setIsTyping,
   skipTyping,
   setSkipTyping,
@@ -15,6 +16,28 @@ function History({
   useEffect(() => {
     prevLanguage.current = language;
   }, [language]);
+
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [history]);
+
+  useEffect(() => {
+    if (!skipTyping) {
+      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [skipTyping]);
+
+  useEffect(() => {
+    if (!isTyping) return;
+
+    const interval = setInterval(() => {
+      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [isTyping]);
 
   return (
     <div>
@@ -66,6 +89,7 @@ function History({
 
         return null;
       })}
+      <div ref={bottomRef} />
     </div>
   );
 }

@@ -46,7 +46,7 @@ export const secondLevelScenesEndings = {
         No hay ni un atisbo de luz en este lugar.
         No tienes noción alguna del tiempo, no sabes cuánto tiempo ha pasado, minutos, horas, años, quizás siglos.
 
-        <i><strong>«Es verdad, no tuvo valor. Al final, ninguna acción tiene valor.»</strong></i>
+        <i><strong><entity>Es verdad, no tuvo valor. Al final, ninguna acción tiene valor.</entity></strong></i>
 
         Es lo último que sientes en tu mente, después solo quedan tus pensamientos.
         Hasta que incluso estos se apagan.
@@ -61,7 +61,7 @@ export const secondLevelScenesEndings = {
         There is not even a trace of light in this place.
         You have no sense of time, you do not know how much time has passed, minutes, hours, years, perhaps centuries.
 
-        <i><strong>«It is true, it had no value. In the end, no action has value.»</strong></i>
+        <i><strong><entity>It is true, it had no value. In the end, no action has value.</entity></strong></i>
 
         It is the last thing you feel in your mind, after that only your thoughts remain.
         Until even these fade away.
@@ -87,15 +87,15 @@ export const secondLevelScenesEndings = {
 
         <strong>El asteroide.</strong>
 
-        <i>«Al final elegiste ayudarlos...»</i>
+        <i><entity>Al final elegiste ayudarlos...</entity></i>
 
-        <i>«Pero tu decisión llegó tarde.»</i>
+        <i><entity>Pero tu decisión llegó tarde.</entity></i>
 
         El asteroide crece en tu campo de visión, devorándolo todo.
 
-        <i>«Ahora debes cargar con su destino.»</i>
-        <i>«…»</i>
-        <i><strong>«Sostenlo.»</strong></i>
+        <i><entity>Ahora debes cargar con su destino.</entity></i>
+        <i><entity>…</entity></i>
+        <i><strong><entity>Sostenlo.</entity></strong></i>
 
         No entiendes nada... Pero obedeces.
         Extiendes los brazos.
@@ -110,13 +110,13 @@ export const secondLevelScenesEndings = {
         Sigue empujando.
         Tu cuerpo es lo único entre él y el planeta amarillo.
 
-        <i>«No puedes destruirlo.»</i>
-        <i>«No puedes desviarlo.»</i>
-        <i>«Solo puedes sostenerlo.»</i>
+        <i><entity>No puedes destruirlo.</entity></i>
+        <i><entity>No puedes desviarlo.</entity></i>
+        <i><entity>Solo puedes sostenerlo.</entity></i>
 
-        <i>«Ambos están anclados al planeta.»</i>
-        <i>«Si cedes…»</i>
-        <i>«Todo termina.»</i>
+        <i><entity>Ambos están anclados al planeta.</entity></i>
+        <i><entity>Si cedes…</entity></i>
+        <i><entity>Todo termina.</entity></i>
 
         Pasa un segundo.
         Luego otro.
@@ -142,7 +142,7 @@ export const secondLevelScenesEndings = {
         Y tú…
         No puedes dejar de resistir.
 
-        <i>«Parece ser que esta vez... no hay <strong>pregunta final</strong>.»</i>`,
+        <i><entity>Parece ser que esta vez... no hay <strong>pregunta final</strong>.</entity></i>`,
       en: `You cross the blue door.
 
         At once, a thin luminous layer, like a membrane, emerges from the bracelet, enveloping your body with an unnatural warmth.
@@ -154,15 +154,15 @@ export const secondLevelScenesEndings = {
 
         <strong>The asteroid.</strong>
 
-        <i>«In the end, you chose to help them...»</i>
+        <i><entity>In the end, you chose to help them...</entity></i>
 
-        <i>«But your decision came too late.»</i>
+        <i><entity>But your decision came too late.</entity></i>
 
         The asteroid grows in your field of vision, devouring everything.
 
-        <i>«Now you must bear their fate.»</i>
-        <i>«…»</i>
-        <i><strong>«Hold it.»</strong></i>
+        <i><entity>Now you must bear their fate.</entity></i>
+        <i><entity>…</entity></i>
+        <i><strong><entity>Hold it.</entity></strong></i>
 
         You do not understand anything... But you obey.
         You extend your arms.
@@ -177,13 +177,13 @@ export const secondLevelScenesEndings = {
         It keeps pushing.
         Your body is the only thing between it and the yellow planet.
 
-        <i>«You cannot destroy it.»</i>
-        <i>«You cannot divert it.»</i>
-        <i>«You can only hold it.»</i>
+        <i><entity>You cannot destroy it.</entity></i>
+        <i><entity>You cannot divert it.</entity></i>
+        <i><entity>You can only hold it.</entity></i>
 
-        <i>«Both are anchored to the planet.»</i>
-        <i>«If you give in…»</i>
-        <i>«Everything ends.»</i>
+        <i><entity>Both are anchored to the planet.</entity></i>
+        <i><entity>If you give in…</entity></i>
+        <i><entity>Everything ends.</entity></i>
 
         A second passes.
         Then another.
@@ -209,7 +209,7 @@ export const secondLevelScenesEndings = {
         And you…
         Cannot stop resisting.
 
-        <i>«It seems that this time... there is no <strong>final question</strong>.»</i>`
+        <i><entity>It seems that this time... there is no <strong>final question</strong>.</entity></i>`
     },
     choices: []
   }

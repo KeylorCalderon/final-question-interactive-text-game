@@ -20,13 +20,13 @@ export const thirdLevelScenes = {
         Pero saben que se han librado por esta vez, y que deben de seguir progresando.
         El universo puede ser un lugar hostil. Necesitan estar preparados.
 
-        <i>«Tus líneas se han acabado.»</i>
+        <i><entity>Tus líneas se han acabado.</entity></i>
 
-        <i>«Es momento de la <strong>pregunta final</strong>.»</i>
+        <i><entity>Es momento de la <strong>pregunta final</strong>.</entity></i>
 
-        <i>«Dime...»</i>
+        <i><entity>Dime...</entity></i>
 
-        <i>«¿Ha valido la pena sacrificar una civilización, para salvar otra?»</i>
+        <i><entity>¿Ha valido la pena sacrificar una civilización, para salvar otra?</entity></i>
 
         Se materializan dos puertas ante ti.
 
@@ -53,13 +53,13 @@ export const thirdLevelScenes = {
         But they know they have been spared this time, and that they must keep progressing.
         The universe can be a hostile place. They need to be prepared.
 
-        <i>«Your lines have run out.»</i>
+        <i><entity>Your lines have run out.</entity></i>
 
-        <i>«It is time for the <strong>final question</strong>.»</i>
+        <i><entity>It is time for the <strong>final question</strong>.</entity></i>
 
-        <i>«Tell me...»</i>
+        <i><entity>Tell me...</entity></i>
 
-        <i>«Was it worth sacrificing one civilization to save another?»</i>
+        <i><entity>Was it worth sacrificing one civilization to save another?</entity></i>
 
         Two doors materialize before you.
 
@@ -101,15 +101,15 @@ export const thirdLevelScenes = {
         La esfera muestra una proyección tuya en tiempo real sobre el cielo del planeta amarillo.
         De fondo oyes un discurso en su lengua.
 
-        <i>«Ahora ellos saben que existes.»</i>
-        <i>«Saben que extinguiste a miles durante su prehistoria, para que el resto pudiera vivir.»</i>
-        <i>«Saben que paraste la crisis nuclear.»</i>
-        <i>«Saben que eso los llevo a su situación actual.»</i>
-        <i>«Y saben que buscas su supervivencia.»</i>
+        <i><entity>Ahora ellos saben que existes.</entity></i>
+        <i><entity>Saben que extinguiste a miles durante su prehistoria, para que el resto pudiera vivir.</entity></i>
+        <i><entity>Saben que paraste la crisis nuclear.</entity></i>
+        <i><entity>Saben que eso los llevo a su situación actual.</entity></i>
+        <i><entity>Y saben que buscas su supervivencia.</entity></i>
 
-        <i>«Ahora que estos miles de millones de ojos pueden verte… <strong>Es momento de la pregunta final</strong>»</i>
+        <i><entity>Ahora que estos miles de millones de ojos pueden verte… <strong>Es momento de la pregunta final</strong></entity></i>
 
-        <i><strong>«¿Qué quieres ser para ellos?»</strong></i>
+        <i><strong><entity>¿Qué quieres ser para ellos?</entity></strong></i>
 
         Se materializan tres puertas ante ti.
 
@@ -131,15 +131,15 @@ export const thirdLevelScenes = {
         The sphere shows a real-time projection of you across the sky of the yellow planet.
         In the background, you hear a speech in their language.
 
-        <i>«Now they know that you exist.»</i>
-        <i>«They know that you extinguished thousands during their prehistory, so that the rest could live.»</i>
-        <i>«They know that you stopped the nuclear crisis.»</i>
-        <i>«They know that this led them to their current situation.»</i>
-        <i>«And they know that you seek their survival.»</i>
+        <i><entity>Now they know that you exist.</entity></i>
+        <i><entity>They know that you extinguished thousands during their prehistory, so that the rest could live.</entity></i>
+        <i><entity>They know that you stopped the nuclear crisis.</entity></i>
+        <i><entity>They know that this led them to their current situation.</entity></i>
+        <i><entity>And they know that you seek their survival.</entity></i>
 
-        <i>«Now that these billions of eyes can see you… <strong>It is time for the final question</strong>»</i>
+        <i><entity>Now that these billions of eyes can see you… <strong>It is time for the final question</strong></entity></i>
 
-        <i><strong>«What do you want to be for them?»</strong></i>
+        <i><strong><entity>What do you want to be for them?</entity></strong></i>
 
         Three doors materialize before you.
 
@@ -185,18 +185,18 @@ export const thirdLevelScenes = {
         Hay estanterías con libros, algunos sofás, sobre uno de ellos se encuentra lo que parece ser un gran muñeco de madera articulado, con cabeza cilíndrica y una joya verde en el pecho.
         Sobre una mesa hay dos tazas con lo que aparenta ser chocolate caliente.
 
-        <i>«Es verdad, no era tu responsabilidad...»</i>
+        <i><entity>Es verdad, no era tu responsabilidad...</entity></i>
 
-        <i>«...»</i>
+        <i><entity>...</entity></i>
 
-        <i>«Aún así, que aburrida.»</i>
+        <i><entity>Aún así, que aburrida.</entity></i>
 
-        <i>«No te preocupes. Tenemos de sobra "juegos" por jugar»</i>
-        <i>«Me has caído bien, antes de saltar al siguiente, responderé una pregunta»</i>
+        <i><entity>No te preocupes. Tenemos de sobra "juegos" por jugar</entity></i>
+        <i><entity>Me has caído bien, antes de saltar al siguiente, responderé una pregunta</entity></i>
 
         Ante ti aparecen cinco papeles flotantes con diferentes preguntas escritas.
 
-        <i>«Adelante»</i>
+        <i><entity>Adelante</entity></i>
 
         Papel 1: ¿Quién soy?
 
@@ -215,18 +215,18 @@ export const thirdLevelScenes = {
         There are shelves with books, some sofas, on one of them there is what appears to be a large articulated wooden doll, with a cylindrical head and a green gem on its chest.
         On a table there are two cups with what appears to be hot chocolate.
 
-        <i>«It is true, it was not your responsibility...»</i>
+        <i><entity>It is true, it was not your responsibility...</entity></i>
 
-        <i>«...»</i>
+        <i><entity>...</entity></i>
 
-        <i>«Even so, how boring.»</i>
+        <i><entity>Even so, how boring.</entity></i>
 
-        <i>«Do not worry. We have plenty of "games" to play»</i>
-        <i>«I have taken a liking to you, before moving on to the next one, I will answer one question»</i>
+        <i><entity>Do not worry. We have plenty of "games" to play</entity></i>
+        <i><entity>I have taken a liking to you, before moving on to the next one, I will answer one question</entity></i>
 
         Before you, five floating sheets of paper appear with different questions written on them.
 
-        <i>«Go ahead»</i>
+        <i><entity>Go ahead</entity></i>
 
         Paper 1: Who am I?
 

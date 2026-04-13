@@ -50,12 +50,12 @@ export const firstLevelScenes = {
 
         De pronto, una presencia resuena en tu cabeza.
 
-        <i>«Aunque el universo ya haya olvidado que los tuyos existieron… al final, toda civilización llega aquí. No eres dios, ni juez, solamente un observador obligado a decidir...»</i>
+        <i><entity>Aunque el universo ya haya olvidado que los tuyos existieron… al final, toda civilización llega aquí. No eres dios, ni juez, solamente un observador obligado a decidir...</entity></i>
 
         Tu uniforme militar se disuelve y en su lugar aparece un vestido blanco junto a unas sandalias.
         En tu muñeca izquierda aparece un artefacto cristalino, un brazalete con diez líneas grabadas en él.
         
-        <i>«Cada puerta es una posibilidad. Cada elección, un veredicto... Pero <strong>tú</strong> deberás pagar su precio.»</i>
+        <i><entity>Cada puerta es una posibilidad. Cada elección, un veredicto... Pero <strong>tú</strong> deberás pagar su precio.</entity></i>
         
         Frente a ti, se materializan cuatro puertas, cada una de un color distinto con un texto grabado en tu lengua natal, y la cantidad de líneas a pagar por atravesarlas.
 
@@ -95,12 +95,12 @@ export const firstLevelScenes = {
         
         Suddenly, a presence echoes in your mind.
         
-        <i>“Even if the universe has already forgotten that your kind ever existed... in the end, every civilization arrives here. You are neither a god nor a judge, only an observer forced to decide...”</i>
+        <i><entity>Even if the universe has already forgotten that your kind ever existed... in the end, every civilization arrives here. You are neither a god nor a judge, only an observer forced to decide...</entity></i>
 
         Your military uniform dissolves, and in its place appears a white dress along with a pair of sandals.
         On your left wrist, a crystalline artifact appears, a bracelet with ten lines engraved upon it.
         
-        <i>“Each door is a possibility. Each choice, a verdict... But <strong>you</strong> will have to pay its price.”</i>
+        <i><entity>Each door is a possibility. Each choice, a verdict... But <strong>you</strong> will have to pay its price.</entity></i>
         
         In front of you, four doors materialize, each a different color, with text engraved in your native language, along with the number of lines required to pass through them.
 
@@ -178,14 +178,14 @@ export const firstLevelScenes = {
         Sin ningún desafío por superar, su civilización no evoluciona, es pacífica, pero estancada en un estado primitivo.
         El potencial que una vez tuvieron de expandirse y prosperar... ha desaparecido.
         
-        <i>«Diste todo por ellos... y no son capaces siquiera de concebir la idea de tu existencia, menos la suya propia»</i>
+        <i><entity>Diste todo por ellos... y no son capaces siquiera de concebir la idea de tu existencia, menos la suya propia</entity></i>
         
         La esfera muestra como la tranquila y rudimentaria civilización de los Juhnuh desaparece, un instante en el tiempo borra todo rastro de su existencia, convirtiéndose en solo una de las muchas formas de vida en la historia de ese planeta amarillo.
 
-        <i>«Te sacrificaste, dando abundancia... Sin embargo, no supieron aprovechar tu regalo... Fuiste su dios... E incluso los dioses deben responder»</i>
-        <i>«No quedan más líneas... Es momento de la <strong>pregunta final</strong>»</i>
+        <i><entity>Te sacrificaste, dando abundancia... Sin embargo, no supieron aprovechar tu regalo... Fuiste su dios... E incluso los dioses deben responder</entity></i>
+        <i><entity>No quedan más líneas... Es momento de la <strong>pregunta final</strong></entity></i>
         
-        <i><strong>«Si al salvarlos les arrebataste todo su potencial, condenándoles al olvido, ¿tu sacrificio tuvo valor?»</strong></i>
+        <i><strong><entity>Si al salvarlos les arrebataste todo su potencial, condenándoles al olvido, ¿tu sacrificio tuvo valor?</entity></strong></i>
         
         Se materializan dos puertas ante ti.
         
@@ -205,16 +205,16 @@ export const firstLevelScenes = {
         The prayers of their three eyes to the sky have been answered. Their crops flourish, and their small society is saved...
         But the abundance is so great that agriculture loses its meaning, within a few generations, they abandon it and return to gathering.
         With no challenges left to overcome, their civilization does not evolve, it is peaceful, but stagnant in a primitive state.
-        The potential they once had to expand and thrive... has vanished.\
+        The potential they once had to expand and thrive... has vanished.
         
-        <i>“You gave everything for them... and they are not even capable of conceiving the idea of your existence, let alone their own.”</i>
+        <i><entity>You gave everything for them... and they are not even capable of conceiving the idea of your existence, let alone their own.</entity></i>
         
         The sphere shows how the tranquil and rudimentary civilization of the Jhunuh disappears, a single instant in time erases all trace of their existence, turning them into just one of the many life forms in the history of that yellow planet.
 
-        <i>“You sacrificed yourself, giving them abundance... Yet they did not know how to make use of your gift... You were their god... And even gods must answer.”</i>
-        <i>“There are no lines left... It is time for the <strong>final question</strong>.”</i>
+        <i><entity>You sacrificed yourself, giving them abundance... Yet they did not know how to make use of your gift... You were their god... And even gods must answer.</entity></i>
+        <i><entity>There are no lines left... It is time for the <strong>final question</strong>.</entity></i>
         
-        <i><strong>“If by saving them you took away all their potential, condemning them to oblivion, did your sacrifice have value?”</strong></i>
+        <i><strong><entity>If by saving them you took away all their potential, condemning them to oblivion, did your sacrifice have value?</entity></strong></i>
 
         Two doors materialize before you.
         
@@ -260,7 +260,7 @@ export const firstLevelScenes = {
         Numerosas especies se extinguen con rapidez, la calidad del aire alcanza niveles críticos, y algunos Jhunuh comienzan a morir.
         Unos pocos creyentes de la fe más antigua elevan sus plegarias, pidiendo intervención divina.
         
-        <i>«Te has involucrado en su historia... ya no hay marcha atrás...»</i>
+        <i><entity>Te has involucrado en su historia... ya no hay marcha atrás...</entity></i>
         
         Ante ti, se materializan dos puertas.
         
@@ -286,7 +286,7 @@ export const firstLevelScenes = {
         Numerous species go extinct rapidly, air quality reaches critical levels, and some Jhunuh begin to die.
         A few followers of the oldest faith raise their prayers, asking for divine intervention.\
         
-        <i>“You have become involved in their history... there is no turning back now...”</i>
+        <i><entity>You have become involved in their history... there is no turning back now...</entity></i>
         
         Before you, two doors materialize.
         
@@ -339,7 +339,7 @@ export const firstLevelScenes = {
         Dos grandes regiones se miran con odio y miedo mientras se apuntan con misiles nucleares, el reloj nuclear está marcando los últimos segundos.
         La esfera se detiene mostrando a los dos líderes Jhunuh de cada bando.
         
-        <i>«Te has involucrado en su historia... ya no hay marcha atrás...»</i>
+        <i><entity>Te has involucrado en su historia... ya no hay marcha atrás...</entity></i>
         
         Ante ti, se materializan dos puertas.
         
@@ -368,7 +368,7 @@ export const firstLevelScenes = {
         Two great regions glare at each other with hatred and fear as they aim nuclear missiles, the nuclear clock is ticking down its final seconds.
         The sphere pauses, showing the two Jhunuh leaders of each side.
         
-        <i>“You have become involved in their history... there is no turning back now...”</i>
+        <i><entity>You have become involved in their history... there is no turning back now...</entity></i>
         
         Before you, two doors materialize.
         
@@ -420,7 +420,7 @@ export const firstLevelScenes = {
         Hasta que, detectan un gran asteroide de camino a su planeta, que arrasará con todo al impactar.
         El pánico se desata a nivel global, y la sociedad colapsa ante un final inminente.
         
-        <i>«Todavía no te has involucrado en su historia... pero aún puedes elegir...»</i>
+        <i><entity>Todavía no te has involucrado en su historia... pero aún puedes elegir...</entity></i>
         
         Ante ti, se materializan dos puertas.
         
@@ -448,7 +448,7 @@ export const firstLevelScenes = {
         Until they detect a large asteroid heading toward their planet, one that will wipe out everything upon impact.
         Panic spreads globally, and society collapses in the face of an imminent end.
         
-        <i>“You have not yet become involved in their history... but you can still choose...”</i>
+        <i><entity>You have not yet become involved in their history... but you can still choose...</entity></i>
         
         Before you, two doors materialize.
         

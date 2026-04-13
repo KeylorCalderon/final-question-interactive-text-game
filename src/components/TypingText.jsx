@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "../styles.css";
 
 function TypingText({
   text,
@@ -9,54 +10,84 @@ function TypingText({
   setIsTyping,
 }) {
   const [displayedText, setDisplayedText] = useState("");
-  const indexRef = useRef(0);
   const intervalRef = useRef(null);
 
   useEffect(() => {
     if (!animate) {
       setDisplayedText(text);
+      setIsTyping?.(false);
       return;
     }
 
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    let i = 0;
     setDisplayedText("");
-    indexRef.current = 0;
     setIsTyping?.(true);
 
     intervalRef.current = setInterval(() => {
-      if (indexRef.current < text.length) {
-        const char = text[indexRef.current];
-
-        setDisplayedText((prev) => prev + char);
-        indexRef.current += 1;
+      //Soluciona error donde empezaba a imprimir etiquetas
+      if (text[i] === "<") {
+        //Si encuentra etiqueta brinca al final
+        const closingIndex = text.indexOf(">", i);
+        if (closingIndex !== -1) {
+          i = closingIndex + 1; //Salta toda la etiqueta de una vez
+        } else {
+          i++; //En caso de que no hubiera cierre
+        }
       } else {
-        setIsTyping?.(false);
+        i++;
+      }
+
+      //Actualiza el texto en pantalla
+      setDisplayedText(text.slice(0, i));
+
+      if (i >= text.length) {
         clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        setIsTyping?.(false);
       }
     }, speed);
 
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
   }, [text, speed, animate]);
 
   useEffect(() => {
-    if (skipTyping) {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+    if (!skipTyping) return;
 
-      setDisplayedText(text);
-
-      setIsTyping?.(false);
-      setSkipTyping?.(false);
+    //Cancela el typing
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
+
+    setDisplayedText(text);
+    setIsTyping?.(false);
+    setSkipTyping?.(false);
   }, [skipTyping, text]);
 
   function renderStyledText(text) {
     const tagMap = {
       red: { color: "red" },
       green: { color: "limegreen" },
-      blue: { color: "blue" },
+      blue: { color: "#4A9EFF" },
       i: { fontStyle: "italic" },
-      strong: { fontWeight: "bold" },
+      strong: { fontWeight: "bold", fontSize: "1.3em" },
+      entity: {
+        color: "#c4b5fd",
+        display: "inline-block",
+        fontSize: "1.1em",
+        textShadow: "0 0 4px #a78bfa, 0 0 8px #a78bfa",
+        animation: "entityFuzzy 3s infinite ease-in-out",
+        willChange: "filter",
+      },
     };
 
     const root = [];
@@ -74,10 +105,9 @@ function TypingText({
 
     while (i < text.length) {
       if (text[i] === "<") {
-        //Flush pending text before the tag
         flushText();
 
-        const isClosing = text[i + 1] === "/";
+        const isClosing = text[i + 1] === "<" ? false : text[i + 1] === "/";
         const match = text.slice(i).match(/^<\/?(\w+)>/);
 
         if (!match) {
@@ -89,7 +119,6 @@ function TypingText({
         const tag = match[1];
         const fullTag = match[0];
 
-        //Opening tags
         if (!isClosing && tagMap[tag]) {
           const node = { tag, children: [] };
           stack[stack.length - 1].children.push(node);
@@ -98,7 +127,6 @@ function TypingText({
           continue;
         }
 
-        //The closing tags
         if (isClosing && stack.length > 1) {
           const current = stack[stack.length - 1];
           if (current.tag === tag) {

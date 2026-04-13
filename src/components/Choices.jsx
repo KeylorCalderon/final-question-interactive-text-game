@@ -17,14 +17,10 @@ function Choices({ choices, onSelect, inventory, language, isTyping }) {
 
         return (
           <button
+            className="cursor-target"
             key={index}
             onClick={() => onSelect(choice)}
             disabled={isLocked}
-            style={{
-              display: "block",
-              margin: "1rem 0",
-              opacity: isLocked ? 0.5 : 1,
-            }}
           >
             {choice.text[language]}
             {isLocked &&

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%&*";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ÑꙮΓΔΛΠΣΦΨΩඞ@#$%&*";
 
 function GlitchText({ children }) {
   const [text, setText] = useState(children);
@@ -13,7 +13,7 @@ function GlitchText({ children }) {
       const newText = original
         .split("")
         .map((char) => {
-          //Prob can be adjust
+          //La probabilidad se puede ajustar
           if (Math.random() < 0.035 && char !== " ") {
             return letters[Math.floor(Math.random() * letters.length)];
           }
@@ -22,7 +22,7 @@ function GlitchText({ children }) {
         .join("");
 
       setText(newText);
-    }, 450); //Same with velocity
+    }, 450); //Lo mismo con la velocidad
 
     return () => clearInterval(interval);
   }, [children]);
