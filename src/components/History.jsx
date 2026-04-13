@@ -3,14 +3,15 @@ import TypingText from "./TypingText";
 import { scenes, itemTranslations } from "../data/scenes/scenes_index";
 
 function History({
-  history,
-  language,
-  isTyping,
-  setIsTyping,
-  skipTyping,
-  setSkipTyping,
+  history, //Array que tiene todo el historial
+  language, //El idioma, en este caso ESpañol o ENglish
+  isTyping, //Si se está typeando
+  setIsTyping, //Función para activar o desactivar el typeo
+  skipTyping, //Si el usuario salta el typeo
+  setSkipTyping, //Función para cambiar el estado del skipTyping
 }) {
   const prevLanguage = useRef(language);
+  //Boolean que será true cuando se cambie el lenguaje
   const languageChanged = prevLanguage.current !== language;
 
   useEffect(() => {
@@ -19,18 +20,23 @@ function History({
 
   const bottomRef = useRef(null);
 
+  //Scrollea cuando se añade algo nuevo
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [history]);
 
+  //Scrollea si el jugador se salta el typeo
   useEffect(() => {
     if (!skipTyping) {
       bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [skipTyping]);
 
+  //Scrollea de forma continua si se está typeando
   useEffect(() => {
-    if (!isTyping) return;
+    if (!isTyping) {
+      return;
+    }
 
     const interval = setInterval(() => {
       bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -42,8 +48,10 @@ function History({
   return (
     <div>
       {history.map((entry, index) => {
+        //Boolean que será true si el elemento es el último
         const isLast = index === history.length - 1;
 
+        //Boolean que será true si el elemento ES el último y el lenguage NO ha cambiado
         const shouldAnimate = isLast && !languageChanged;
 
         if (entry.type === "scene") {

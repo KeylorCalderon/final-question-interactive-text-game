@@ -9,26 +9,32 @@ function TypingText({
   setSkipTyping,
   setIsTyping,
 }) {
+  //El texto que se muestra en pantalla
   const [displayedText, setDisplayedText] = useState("");
+  //Acá guarda la referencia al setInterval para luego poder pararlo
   const intervalRef = useRef(null);
 
+  //Para mostrar el typeo
   useEffect(() => {
+    //Si no debe animarlo, muestra el texto de golpe y desactiva el typeo
     if (!animate) {
       setDisplayedText(text);
       setIsTyping?.(false);
       return;
     }
 
+    //Si hay un intervalo en proceso lo para
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
 
+    //Vacía el texto y activa el typeo
     let i = 0;
     setDisplayedText("");
     setIsTyping?.(true);
 
     intervalRef.current = setInterval(() => {
-      //Soluciona error donde empezaba a imprimir etiquetas
+      //Soluciona el error donde empezaba a imprimir etiquetas
       if (text[i] === "<") {
         //Si encuentra etiqueta brinca al final
         const closingIndex = text.indexOf(">", i);
@@ -44,6 +50,7 @@ function TypingText({
       //Actualiza el texto en pantalla
       setDisplayedText(text.slice(0, i));
 
+      //Cuando acaba el intervalo
       if (i >= text.length) {
         clearInterval(intervalRef.current);
         intervalRef.current = null;
@@ -51,6 +58,8 @@ function TypingText({
       }
     }, speed);
 
+    //Evita que haya intervalos "zombies" corriendo
+    //NOTA: Se ejecuta antes de correr el useEffect o cuando se quita TypingText
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -59,21 +68,28 @@ function TypingText({
     };
   }, [text, speed, animate]);
 
+  //Este es para saltar el typeo
   useEffect(() => {
-    if (!skipTyping) return;
+    if (!skipTyping) {
+      return;
+    }
 
-    //Cancela el typing
+    //Cancela el typeo
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
 
+    //Muestra todo el texto de una
     setDisplayedText(text);
     setIsTyping?.(false);
     setSkipTyping?.(false);
   }, [skipTyping, text]);
 
+  //Función que aplica estilos a las etiquetas del texto
+  //Parsea texto y lo convierte en nodos para luego pasarlos a elementos de React
   function renderStyledText(text) {
+    //Lo que aplica a cada etiqueta
     const tagMap = {
       red: { color: "red" },
       green: { color: "limegreen" },
@@ -90,13 +106,16 @@ function TypingText({
       },
     };
 
+    //Donde se guarda la estructura final
     const root = [];
+    //Pila para manejar etiquetas anidadas (Cuando habla en ente más que todo)
     const stack = [{ children: root }];
 
     let i = 0;
     let buffer = "";
 
     function flushText() {
+      //Almacena el texto en la pila y limpia el buffer
       if (buffer) {
         stack[stack.length - 1].children.push(buffer);
         buffer = "";
@@ -104,61 +123,84 @@ function TypingText({
     }
 
     while (i < text.length) {
+      //Si encuentra una etiqueta
       if (text[i] === "<") {
+        //Llama a flushText
         flushText();
 
-        const isClosing = text[i + 1] === "<" ? false : text[i + 1] === "/";
+        //Verifica si es una etiqueta de cierre
+        const isClosing = text[i + 1] === "/";
+        //Expresión regular que captura el tipo de etiqueta
         const match = text.slice(i).match(/^<\/?(\w+)>/);
 
+        //Si hay un error solo añade el "<" y continua
         if (!match) {
           buffer += text[i];
           i++;
           continue;
         }
 
+        //La etiqueta completa, por ejemplo "<red>""
         const tag = match[1];
+        //Solo el tag de la etiqueta, por ejemplo "red"
         const fullTag = match[0];
 
+        //Si es una etiqueta de apertura y es válida en el tagMap
         if (!isClosing && tagMap[tag]) {
+          //Crea un nodo
           const node = { tag, children: [] };
+          //Lo mete al final de la pila
           stack[stack.length - 1].children.push(node);
           stack.push(node);
+          //Adelanta el índice para que se salte toda la etiqueta
           i += fullTag.length;
           continue;
         }
 
+        //Si es una etiqueta de cierre y la pila tiene la de apertura
         if (isClosing && stack.length > 1) {
           const current = stack[stack.length - 1];
+          //Verifica que sea el mismo tag de apertura
           if (current.tag === tag) {
+            //Vuelve al nivel anterior
             stack.pop();
+            //Adelanta el índice para que se salte toda la etiqueta
             i += fullTag.length;
             continue;
           }
         }
       }
-
+      //Añade el carácter al buffer
       buffer += text[i];
       i++;
     }
-
+    //Última llamada al flushText
     flushText();
 
-    function build(nodes) {
-      return nodes.map((node, idx) => {
-        if (typeof node === "string") return node;
+    //Función que transforma los nodos en elementos React
+    function buildReactElements(nodes) {
+      return nodes.map((node, idNode) => {
+        //Si es texto plano lo devuelve tal cuál
+        if (typeof node === "string") {
+          return node;
+        }
 
+        //Si no, devuelve un span con el estilo del tagMap
+        //Y llama la función de forma recursiva lo que deja que haya
+        //etiquetas anidadas (Cuando habla el ente)
         return (
-          <span key={idx} style={tagMap[node.tag]}>
-            {build(node.children)}
+          <span key={idNode} style={tagMap[node.tag]}>
+            {buildReactElements(node.children)}
           </span>
         );
       });
     }
 
-    return build(root);
+    return buildReactElements(root);
   }
 
   return (
+    //El whitespace es para que respete los saltos de línea
     <span style={{ whiteSpace: "pre-line" }}>
       {renderStyledText(displayedText)}
     </span>

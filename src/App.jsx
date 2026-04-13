@@ -22,14 +22,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const historyEl = document.querySelector(".history");
+    const historyElement = document.querySelector(".history");
 
-    if (!historyEl) return;
-
+    if (!historyElement) {
+      return;
+    }
+    //Si está escribiendo bloquea el scroll
     if (isTyping) {
-      historyEl.style.overflowY = "hidden";
-    } else {
-      historyEl.style.overflowY = "auto";
+      historyElement.style.overflowY = "hidden";
+    }
+    //Si no, lo permite
+    else {
+      historyElement.style.overflowY = "auto";
     }
   }, [isTyping]);
 
@@ -37,6 +41,7 @@ function App() {
     //Guarda elección
     setHistory((prev) => [...prev, { type: "choice", choice }]);
 
+    //Manejo de obtención y consumo de items(no se usa en la historia actual)
     if (choice.givesItem) {
       if (!inventory.includes(choice.givesItem)) {
         setInventory((prev) => [...prev, choice.givesItem]);
@@ -56,7 +61,7 @@ function App() {
         prev.filter((item) => item !== choice.consumesItem),
       );
     }
-
+    //-----------------------------------------------------------------------
     setCurrentScene(choice.next);
 
     setHistory((prev) => [...prev, { type: "scene", sceneId: choice.next }]);
@@ -64,6 +69,7 @@ function App() {
 
   const scene = scenes[currentScene];
 
+  //Oculta las escenas no disponibles, esto funciona junto a la opción de dar items(Tampoco se usa en la historia actual)
   const visibleChoices = scene.choices.filter(
     (choice) => !usedChoices.includes(choice.id),
   );

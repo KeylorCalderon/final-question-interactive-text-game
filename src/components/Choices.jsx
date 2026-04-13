@@ -5,6 +5,7 @@ function Choices({ choices, onSelect, inventory, language, isTyping }) {
     return null;
   }
 
+  //Se alcanzó el fin de la historia
   if (!choices.length) {
     return <p>----------</p>;
   }
