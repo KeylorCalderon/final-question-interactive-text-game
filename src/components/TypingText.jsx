@@ -60,11 +60,6 @@ function TypingText({
       return;
     }
 
-    //Si hay un intervalo en proceso lo para
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-
     //Vacía el texto y activa el typeo
     indexRef.current = 0;
     setDisplayedText("");
@@ -88,9 +83,6 @@ function TypingText({
     if (!intervalRef.current) {
       return;
     }
-
-    //Reinicia el intervalo con la velocidad nueva pero sin reiniciar el texto desde el principio
-    clearInterval(intervalRef.current);
 
     startTypingInterval(textSpeed);
   }, [textSpeed]);
