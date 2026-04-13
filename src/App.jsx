@@ -5,6 +5,7 @@ import Choices from "./components/Choices";
 import History from "./components/History";
 import GlitchText from "./components/GlitchText";
 import Galaxy from "./components/Galaxy";
+import SidePanel from "./components/SidePanel";
 import "./styles.css";
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
   const [language, setLanguage] = useState("es");
   const [isTyping, setIsTyping] = useState(false);
   const [skipTyping, setSkipTyping] = useState(false);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [textSpeed, setTextSpeed] = useState(40);
 
   //Inicializa la historia
   useEffect(() => {
@@ -75,14 +78,7 @@ function App() {
   );
 
   return (
-    <div
-      style={{ position: "relative", width: "100%", height: "100vh" }}
-      onClick={() => {
-        if (isTyping) {
-          setSkipTyping(true);
-        }
-      }}
-    >
+    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor
@@ -92,7 +88,14 @@ function App() {
       <Galaxy speed={1.0} density={1.0} glowIntensity={0.3} saturation={0.0} />
       <div className="ui">
         <GlitchText>THE FINAL QUESTION</GlitchText>
-        <div className="history">
+        <div
+          className="history"
+          onClick={() => {
+            if (isTyping) {
+              setSkipTyping(true);
+            }
+          }}
+        >
           <History
             history={history}
             language={language}
@@ -100,6 +103,7 @@ function App() {
             setIsTyping={setIsTyping}
             skipTyping={skipTyping}
             setSkipTyping={setSkipTyping}
+            textSpeed={textSpeed}
           />
         </div>
         <div className="choices">
@@ -111,15 +115,21 @@ function App() {
             isTyping={isTyping}
           />
         </div>
-        <div className="languages">
-          <button className="cursor-target" onClick={() => setLanguage("es")}>
-            ES
-          </button>
-          <button className="cursor-target" onClick={() => setLanguage("en")}>
-            EN
-          </button>
-        </div>
+        <button
+          className="panel-toggle cursor-target"
+          onClick={() => setIsPanelOpen(!isPanelOpen)}
+        >
+          ☰
+        </button>
       </div>
+      <SidePanel
+        isOpen={isPanelOpen}
+        setIsOpen={setIsPanelOpen}
+        language={language}
+        setLanguage={setLanguage}
+        textSpeed={textSpeed}
+        setTextSpeed={setTextSpeed}
+      />
     </div>
   );
 }

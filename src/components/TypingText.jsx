@@ -3,7 +3,7 @@ import "../styles.css";
 
 function TypingText({
   text,
-  speed = 40,
+  textSpeed,
   animate = true,
   skipTyping,
   setSkipTyping,
@@ -13,8 +13,45 @@ function TypingText({
   const [displayedText, setDisplayedText] = useState("");
   //Acá guarda la referencia al setInterval para luego poder pararlo
   const intervalRef = useRef(null);
+  //Referencia al índice para cuando se aumenta o disminuye la velocidad
+  const indexRef = useRef(0);
 
-  //Para mostrar el typeo
+  //Como se duplicaba la lógica del intervalo, la saqué en una función
+  function startTypingInterval(speed) {
+    //Evita la duplicación de intervalos
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(() => {
+      //Ahora retoma el texto donde quedó en caso de cambio de velocidad
+      let i = indexRef.current;
+      //Soluciona el error donde empezaba a imprimir etiquetas
+      if (text[i] === "<") {
+        //Si encuentra etiqueta brinca al final
+        const closingIndex = text.indexOf(">", i);
+        if (closingIndex !== -1) {
+          i = closingIndex + 1; //Salta toda la etiqueta de una vez
+        } else {
+          i++; //En caso de que no hubiera cierre
+        }
+      } else {
+        i++;
+      }
+
+      indexRef.current = i;
+      //Actualiza el texto en pantalla
+      setDisplayedText(text.slice(0, i));
+      console.log(textSpeed, "Velocidad de texto");
+      //Cuando acaba el intervalo
+      if (i >= text.length) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        setIsTyping?.(false);
+      }
+    }, speed);
+  }
+
   useEffect(() => {
     //Si no debe animarlo, muestra el texto de golpe y desactiva el typeo
     if (!animate) {
@@ -29,34 +66,11 @@ function TypingText({
     }
 
     //Vacía el texto y activa el typeo
-    let i = 0;
+    indexRef.current = 0;
     setDisplayedText("");
     setIsTyping?.(true);
 
-    intervalRef.current = setInterval(() => {
-      //Soluciona el error donde empezaba a imprimir etiquetas
-      if (text[i] === "<") {
-        //Si encuentra etiqueta brinca al final
-        const closingIndex = text.indexOf(">", i);
-        if (closingIndex !== -1) {
-          i = closingIndex + 1; //Salta toda la etiqueta de una vez
-        } else {
-          i++; //En caso de que no hubiera cierre
-        }
-      } else {
-        i++;
-      }
-
-      //Actualiza el texto en pantalla
-      setDisplayedText(text.slice(0, i));
-
-      //Cuando acaba el intervalo
-      if (i >= text.length) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-        setIsTyping?.(false);
-      }
-    }, speed);
+    startTypingInterval(textSpeed);
 
     //Evita que haya intervalos "zombies" corriendo
     //NOTA: Se ejecuta antes de correr el useEffect o cuando se quita TypingText
@@ -66,7 +80,20 @@ function TypingText({
         intervalRef.current = null;
       }
     };
-  }, [text, speed, animate]);
+  }, [text, animate]);
+
+  //Para la velocidad de texto
+  useEffect(() => {
+    //No se hace nada si no se está typeando
+    if (!intervalRef.current) {
+      return;
+    }
+
+    //Reinicia el intervalo con la velocidad nueva pero sin reiniciar el texto desde el principio
+    clearInterval(intervalRef.current);
+
+    startTypingInterval(textSpeed);
+  }, [textSpeed]);
 
   //Este es para saltar el typeo
   useEffect(() => {
@@ -80,6 +107,7 @@ function TypingText({
       intervalRef.current = null;
     }
 
+    indexRef.current = text.length;
     //Muestra todo el texto de una
     setDisplayedText(text);
     setIsTyping?.(false);

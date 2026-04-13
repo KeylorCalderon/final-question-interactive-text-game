@@ -9,6 +9,7 @@ function History({
   setIsTyping, //Función para activar o desactivar el typeo
   skipTyping, //Si el usuario salta el typeo
   setSkipTyping, //Función para cambiar el estado del skipTyping
+  textSpeed, //Velocidad del texo
 }) {
   const prevLanguage = useRef(language);
   //Boolean que será true cuando se cambie el lenguaje
@@ -65,6 +66,7 @@ function History({
                 setIsTyping={setIsTyping}
                 skipTyping={skipTyping}
                 setSkipTyping={setSkipTyping}
+                textSpeed={textSpeed}
               />
             </p>
           );
