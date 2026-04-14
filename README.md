@@ -1,4 +1,4 @@
-# 🎮 The Final Question
+# 🎮 THE FINAL QUESTION
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -37,7 +37,6 @@ Try different paths, you can help them gently, act as a harsh judge, or ignore t
 ## ⬇️ Installation
 
 ```bash
-⬇️ Installation
 Prerequisites
 
 Node.js 18+
@@ -58,4 +57,5 @@ npm run dev
 ## 💭 Feedback and Contributing
 
 This is my first big personal project after university, so every comment helps me improve!
+
 Thank you for playing!
