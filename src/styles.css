@@ -133,12 +133,23 @@
   transform: scale(0.98);
 }
 
-.glitch {
+.glitch.default {
   color: #F4F4F4;
   font-size: clamp(2rem, 6vw, 6rem);
   height: 15vh;
   white-space: nowrap;
   font-weight: 700;
+  position: relative;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.glitch.intro {
+  color: #F4F4F4;
+  font-size: clamp(8rem, 8vw, 12rem);
+  height: 35vh;
+  white-space: nowrap;
+  font-weight: 900;
   position: relative;
   margin: 0 auto;
   user-select: none;
@@ -432,9 +443,8 @@ button {
 }
 
 .bracelet {
-  
   width: 15vw;
-  height: 40vh;
+  height: 42vh;
   
   background: rgba(41, 66, 129, 0.18);
   backdrop-filter: blur(12px);
@@ -447,11 +457,17 @@ button {
     0 0 20px rgba(80, 141, 255, 0.75);
 
   position: absolute;
-  right: 40px;
+  right: 60px;
   top: 40%;
   transform: translateY(-50%);
 
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
+}
+
+.bracelet.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.95);
 }
 
 .bracelet-inner {
@@ -476,10 +492,85 @@ button {
 }
 
 .bracelet-value {
-  font-size: 40px;
+  font-size: clamp(18px, 3vw, 40px);
   font-weight: bold;
+  transform: translateX(17px);
+  display: inline-block;
 
   text-shadow:
     0 0 10px rgba(120, 160, 255, 0.8),
     0 0 20px rgba(120, 160, 255, 0.6);
+}
+
+.start-button {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 120px;
+
+  background: rgba(41, 66, 129, 0.226);
+  color: #edeff7;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(120, 161, 255, 0.781);
+
+  box-shadow:
+    0 0 6px rgba(80, 141, 255, 0.89);
+
+  border-radius: 12px;
+
+  padding: 20px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button:hover {
+  background: rgba(120, 160, 255, 0.3);
+  box-shadow:
+    0 0 35px rgba(80, 141, 255, 0.89);
+}
+
+.start-links {
+  display: flex;
+  gap: 64px;
+  transform: translateY(20vh);
+}
+
+.start-link-btn {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 36px;
+
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  background: rgba(41, 66, 129, 0.226);
+  color: #edeff7;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(120, 161, 255, 0.781);
+
+  box-shadow:
+    0 0 6px rgba(80, 141, 255, 0.89);
+}
+
+.start-link-btn:hover {
+  background: rgba(120, 160, 255, 0.3);
+  box-shadow:
+    0 0 35px rgba(80, 141, 255, 0.89);
+}
+
+.ending-text {
+  color: #edeff7;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 36px;
+  text-shadow: 0 0 4px #a78bfa, 0 0 8px #a78bfa;
+  animation: entityFuzzy 3s infinite ease-in-out;
 }

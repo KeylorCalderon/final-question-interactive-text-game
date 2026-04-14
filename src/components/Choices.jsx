@@ -7,7 +7,11 @@ function Choices({ choices, onSelect, inventory, language, isTyping, lines }) {
 
   //Se alcanzó el fin de la historia
   if (!choices.length) {
-    return <p>----------</p>;
+    return (
+      <p className="ending-text">
+        <i>---{narrationTranslations.ending[language]}---</i>
+      </p>
+    );
   }
 
   return (

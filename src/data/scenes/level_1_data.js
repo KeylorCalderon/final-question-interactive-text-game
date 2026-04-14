@@ -27,7 +27,8 @@ export const firstLevelScenes = {
           es: "Acércarte al cubo",
           en: "Approach the cube"
         },
-        next: "001_beginning_of_Jhunuh"
+        next: "001_beginning_of_Jhunuh",
+        givesLines: 10
       }
     ]
   },

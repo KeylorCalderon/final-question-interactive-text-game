@@ -14,12 +14,13 @@ function App() {
   const [inventory, setInventory] = useState([]);
   const [usedChoices, setUsedChoices] = useState([]);
   const [history, setHistory] = useState([]);
-  const [language, setLanguage] = useState("es");
+  const [language, setLanguage] = useState("en");
   const [isTyping, setIsTyping] = useState(false);
   const [skipTyping, setSkipTyping] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [textSpeed, setTextSpeed] = useState(40);
-  const [lines, setLines] = useState(10);
+  const [lines, setLines] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
 
   //Inicializa la historia
   useEffect(() => {
@@ -81,6 +82,7 @@ function App() {
       setLines((prev) => prev - choice.requiresLines);
     }
 
+    setIsTyping(true);
     setCurrentScene(choice.next);
 
     setHistory((prev) => [...prev, { type: "scene", sceneId: choice.next }]);
@@ -93,6 +95,13 @@ function App() {
     (choice) => !usedChoices.includes(choice.id),
   );
 
+  //Para eliminar el brazalete al final
+  useEffect(() => {
+    if (gameStarted && visibleChoices.length === 0) {
+      setLines(0);
+    }
+  }, [visibleChoices, gameStarted]);
+
   return (
     <div>
       <TargetCursor
@@ -102,48 +111,82 @@ function App() {
         hoverDuration={0.2}
       />
       <Galaxy speed={1.0} density={1.0} glowIntensity={0.3} saturation={0.0} />
-      <div className="ui">
-        <GlitchText>THE FINAL QUESTION</GlitchText>
-        <div className="history-bracelet">
-          <div
-            className="history"
-            onClick={() => {
-              if (isTyping) {
-                setSkipTyping(true);
-              }
-            }}
+      {!gameStarted && (
+        <div className="ui">
+          <GlitchText variant="intro">THE FINAL QUESTION</GlitchText>
+          <button
+            className="start-button cursor-target"
+            onClick={() => setGameStarted(true)}
           >
-            <History
-              history={history}
+            ▶ PLAY
+          </button>
+          <div className="start-links">
+            <button
+              className="start-link-btn cursor-target"
+              onClick={() => window.open("https://www.google.com/", "_blank")}
+            >
+              About me
+            </button>
+            <button
+              className="start-link-btn cursor-target"
+              onClick={() =>
+                window.open(
+                  "https://github.com/KeylorCalderon/final-question-interactive-text-game",
+                  "_blank",
+                )
+              }
+            >
+              GitHub
+            </button>
+          </div>
+        </div>
+      )}
+      {gameStarted && (
+        <div className="ui">
+          <GlitchText>THE FINAL QUESTION</GlitchText>
+
+          <div className="history-bracelet">
+            <div
+              className="history"
+              onClick={() => {
+                if (isTyping) {
+                  setSkipTyping(true);
+                }
+              }}
+            >
+              <History
+                history={history}
+                language={language}
+                isTyping={isTyping}
+                setIsTyping={setIsTyping}
+                skipTyping={skipTyping}
+                setSkipTyping={setSkipTyping}
+                textSpeed={textSpeed}
+              />
+            </div>
+            <div className={`bracelet ${lines <= 0 ? "hidden" : ""}`}>
+              <Bracelet lines={lines} language={language} />
+            </div>
+          </div>
+          <div className="choices">
+            <Choices
+              choices={visibleChoices}
+              onSelect={handleChoice}
+              inventory={inventory}
               language={language}
               isTyping={isTyping}
-              setIsTyping={setIsTyping}
-              skipTyping={skipTyping}
-              setSkipTyping={setSkipTyping}
-              textSpeed={textSpeed}
+              lines={lines}
             />
           </div>
-          <div className="bracelet">
-            <Bracelet lines={lines} language={language} />
-          </div>
+
+          <button
+            className="panel-toggle cursor-target"
+            onClick={() => setIsPanelOpen(!isPanelOpen)}
+          >
+            ☰
+          </button>
         </div>
-        <div className="choices">
-          <Choices
-            choices={visibleChoices}
-            onSelect={handleChoice}
-            inventory={inventory}
-            language={language}
-            isTyping={isTyping}
-            lines={lines}
-          />
-        </div>
-        <button
-          className="panel-toggle cursor-target"
-          onClick={() => setIsPanelOpen(!isPanelOpen)}
-        >
-          ☰
-        </button>
-      </div>
+      )}
       <SidePanel
         isOpen={isPanelOpen}
         setIsOpen={setIsPanelOpen}

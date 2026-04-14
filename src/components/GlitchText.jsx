@@ -3,7 +3,7 @@ import "../styles.css";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ÑꙮΓΔΛΠΣΦΨΩඞ@#$%&*";
 
-function GlitchText({ children }) {
+function GlitchText({ children, variant = "default" }) {
   const [text, setText] = useState(children);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function GlitchText({ children }) {
   }, [children]);
 
   return (
-    <div className="glitch" data-text={text}>
+    <div className={`glitch ${variant}`} data-text={text}>
       {text}
     </div>
   );

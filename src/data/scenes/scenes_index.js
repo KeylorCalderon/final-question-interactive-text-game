@@ -29,5 +29,9 @@ export const narrationTranslations = {
   need: {
     es: "necesitas",
     en: "you need"
+  },
+  ending: {
+    es: "FIN DE LA PARTIDA",
+    en: "END OF THE GAME"
   }
 };
