@@ -367,17 +367,31 @@ button {
     0 0 35px rgba(80, 141, 255, 0.89);
 }
 
+.sections {
+  margin-top: 18vh;
+}
+
 .section {
   margin-top: 20px;
   text-align: center;
 }
 
-.sections {
-  margin-top: 20vh;
-}
-
 .section h3 {
   margin-bottom: 10px;
+}
+
+.section-about-me {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-about-me h3 {
+  margin-bottom: 2px;
+}
+
+.section-about-me p {
+  font-size: 15px;
+  line-height: 1.3;
 }
 
 .section input[type="range"] {

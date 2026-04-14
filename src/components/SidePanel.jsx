@@ -8,6 +8,8 @@ function SidePanel({
   setLanguage,
   textSpeed,
   setTextSpeed,
+  isMuted,
+  setIsMuted,
 }) {
   return (
     <div className={`sidepanel ${isOpen ? "open" : ""}`}>
@@ -48,6 +50,18 @@ function SidePanel({
         </div>
 
         <div className="section">
+          <h3>{uiTranslations.music[language]}</h3>
+          <button
+            className="sidepanel-btn cursor-target"
+            onClick={() => setIsMuted((prev) => !prev)}
+          >
+            {isMuted
+              ? uiTranslations.music_off[language]
+              : uiTranslations.music_on[language]}
+          </button>
+        </div>
+
+        <div className="section-about-me">
           <h3>{uiTranslations.about[language]}</h3>
           <p style={{ whiteSpace: "pre-line" }}>
             {uiTranslations.creatorDescription[language]}

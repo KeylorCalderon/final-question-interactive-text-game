@@ -7,6 +7,7 @@ import GlitchText from "./components/GlitchText";
 import Galaxy from "./components/Galaxy";
 import SidePanel from "./components/SidePanel";
 import Bracelet from "./components/Bracelet";
+import Song from "./assets/lemonmusiclab-dark-ambient-soundscape.mp3";
 import "./styles.css";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
   const [textSpeed, setTextSpeed] = useState(40);
   const [lines, setLines] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
+  const audioRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(false);
 
   //Inicializa la historia
   useEffect(() => {
@@ -102,8 +105,30 @@ function App() {
     }
   }, [visibleChoices, gameStarted]);
 
+  //Para activar la música al iniciar
+  useEffect(() => {
+    if (!gameStarted) return;
+    if (!audioRef.current) return;
+
+    const audio = audioRef.current;
+    audio.volume = 0.5;
+    audio.loop = true;
+
+    audio.play().catch((e) => {
+      console.log("Audio blocked:", e);
+    });
+  }, [gameStarted]);
+
+  //Para activar/desactivar la música
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    audioRef.current.muted = isMuted;
+  }, [isMuted]);
+
   return (
     <div>
+      <audio ref={audioRef} src={Song} preload="auto" />
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor
@@ -116,7 +141,15 @@ function App() {
           <GlitchText variant="intro">THE FINAL QUESTION</GlitchText>
           <button
             className="start-button cursor-target"
-            onClick={() => setGameStarted(true)}
+            onClick={() => {
+              setGameStarted(true);
+
+              if (audioRef.current) {
+                audioRef.current.play().catch((e) => {
+                  console.log("Autoplay blocked:", e);
+                });
+              }
+            }}
           >
             ▶ PLAY
           </button>
@@ -194,6 +227,8 @@ function App() {
         setLanguage={setLanguage}
         textSpeed={textSpeed}
         setTextSpeed={setTextSpeed}
+        isMuted={isMuted}
+        setIsMuted={setIsMuted}
       />
     </div>
   );
