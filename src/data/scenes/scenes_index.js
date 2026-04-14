@@ -20,3 +20,14 @@ export const itemTranslations = {
     en: "Key"
   }
 };
+
+export const narrationTranslations = {
+  lines: {
+    es: "líneas",
+    en: "lines"
+  },
+  need: {
+    es: "necesitas",
+    en: "you need"
+  }
+};

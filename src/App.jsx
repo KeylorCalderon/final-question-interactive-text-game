@@ -67,6 +67,20 @@ function App() {
       );
     }
     //-----------------------------------------------------------------------
+
+    //Si no hay suficientes líneas no puede elegirla, volver acá LUEGO
+    if (choice.requiresLines && lines < choice.requiresLines) {
+      return;
+    }
+
+    if (choice.givesLines) {
+      setLines((prev) => prev + choice.givesLines);
+    }
+
+    if (choice.requiresLines) {
+      setLines((prev) => prev - choice.requiresLines);
+    }
+
     setCurrentScene(choice.next);
 
     setHistory((prev) => [...prev, { type: "scene", sceneId: choice.next }]);
@@ -120,6 +134,7 @@ function App() {
             inventory={inventory}
             language={language}
             isTyping={isTyping}
+            lines={lines}
           />
         </div>
         <button

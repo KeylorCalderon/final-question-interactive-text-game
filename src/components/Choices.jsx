@@ -1,6 +1,6 @@
-import { itemTranslations } from "../data/scenes/scenes_index";
+import { narrationTranslations } from "../data/scenes/scenes_index";
 
-function Choices({ choices, onSelect, inventory, language, isTyping }) {
+function Choices({ choices, onSelect, inventory, language, isTyping, lines }) {
   if (isTyping) {
     return null;
   }
@@ -14,20 +14,23 @@ function Choices({ choices, onSelect, inventory, language, isTyping }) {
     <div>
       {choices.map((choice, index) => {
         const isLocked =
-          choice.requiresItem && !inventory.includes(choice.requiresItem);
+          (choice.requiresItem && !inventory.includes(choice.requiresItem)) ||
+          (choice.requiresLines && lines < choice.requiresLines);
 
         return (
           <button
-            className="cursor-target"
+            className={`choice-button ${isLocked ? "locked" : "cursor-target"}`}
             key={index}
             onClick={() => onSelect(choice)}
             disabled={isLocked}
           >
             {choice.text[language]}
             {isLocked &&
-              ` (${language === "es" ? "necesitas" : "you need"} ${
-                itemTranslations[choice.requiresItem][language]
-              })`}
+              choice.requiresLines &&
+              !choice.requiresItem &&
+              ` (${narrationTranslations.need[language]} ${
+                choice.requiresLines
+              } ${narrationTranslations.lines[language]})`}
           </button>
         );
       })}
