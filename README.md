@@ -41,6 +41,7 @@ Prerequisites
 
 Node.js 18+
 npm or yarn
+
 # Clone the repo
 git clone https://github.com/KeylorCalderon/final-question-interactive-text-game.git
 
