@@ -1,4 +1,8 @@
 export const uiTranslations = {
+  lines: {
+    es: "LÍNEAS",
+    en: "LINES",
+  },
   settings: {
     es: "Configuración",
     en: "Settings",

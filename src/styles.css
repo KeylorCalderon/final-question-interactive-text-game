@@ -24,6 +24,7 @@
   max-width: 1440px;
   height: 68vh;
   flex: none;
+  margin: 0 auto;
 
   overflow-y: auto;
   padding: 24px;
@@ -412,4 +413,62 @@ button {
   border-radius: 50%;
   background: #78a1ff;
   border: none;
+}
+
+.history-bracelet {
+  position: relative;
+  width: 100%;
+}
+
+.bracelet {
+  
+  width: 15vw;
+  height: 40vh;
+  
+  background: rgba(41, 66, 129, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(120, 161, 255, 0.75);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 20px rgba(80, 141, 255, 0.75);
+
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  transform: translateY(-50%);
+
+  transition: all 0.2s ease;
+}
+
+.bracelet-inner {
+  margin-top: 16px;
+  text-align: center;
+  color: #edeff7;
+  
+  font-family: "JetBrains Mono", monospace;
+}
+
+.bracelet-label {
+  
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  text-shadow:
+    0 0 10px rgba(120, 160, 255, 0.8),
+    0 0 20px rgba(120, 160, 255, 0.6);
+}
+
+.bracelet-value {
+  font-size: 40px;
+  font-weight: bold;
+
+  text-shadow:
+    0 0 10px rgba(120, 160, 255, 0.8),
+    0 0 20px rgba(120, 160, 255, 0.6);
 }

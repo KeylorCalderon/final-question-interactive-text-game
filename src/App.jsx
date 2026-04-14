@@ -6,6 +6,7 @@ import History from "./components/History";
 import GlitchText from "./components/GlitchText";
 import Galaxy from "./components/Galaxy";
 import SidePanel from "./components/SidePanel";
+import Bracelet from "./components/Bracelet";
 import "./styles.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   const [skipTyping, setSkipTyping] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [textSpeed, setTextSpeed] = useState(40);
+  const [lines, setLines] = useState(10);
 
   //Inicializa la historia
   useEffect(() => {
@@ -88,23 +90,28 @@ function App() {
       <Galaxy speed={1.0} density={1.0} glowIntensity={0.3} saturation={0.0} />
       <div className="ui">
         <GlitchText>THE FINAL QUESTION</GlitchText>
-        <div
-          className="history"
-          onClick={() => {
-            if (isTyping) {
-              setSkipTyping(true);
-            }
-          }}
-        >
-          <History
-            history={history}
-            language={language}
-            isTyping={isTyping}
-            setIsTyping={setIsTyping}
-            skipTyping={skipTyping}
-            setSkipTyping={setSkipTyping}
-            textSpeed={textSpeed}
-          />
+        <div className="history-bracelet">
+          <div
+            className="history"
+            onClick={() => {
+              if (isTyping) {
+                setSkipTyping(true);
+              }
+            }}
+          >
+            <History
+              history={history}
+              language={language}
+              isTyping={isTyping}
+              setIsTyping={setIsTyping}
+              skipTyping={skipTyping}
+              setSkipTyping={setSkipTyping}
+              textSpeed={textSpeed}
+            />
+          </div>
+          <div className="bracelet">
+            <Bracelet lines={lines} language={language} />
+          </div>
         </div>
         <div className="choices">
           <Choices
