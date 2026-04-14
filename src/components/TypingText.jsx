@@ -42,7 +42,6 @@ function TypingText({
       indexRef.current = i;
       //Actualiza el texto en pantalla
       setDisplayedText(text.slice(0, i));
-      console.log(textSpeed, "Velocidad de texto");
       //Cuando acaba el intervalo
       if (i >= text.length) {
         clearInterval(intervalRef.current);
@@ -53,19 +52,24 @@ function TypingText({
   }
 
   useEffect(() => {
+    const isCompleted = displayedText === text && !intervalRef.current;
+
+    //Este es el caso cuando cambia de idioma mientras escribe
+    if (animate && !isCompleted) {
+      indexRef.current = 0;
+      setDisplayedText("");
+      setIsTyping?.(true);
+
+      startTypingInterval(textSpeed);
+      return;
+    }
+
     //Si no debe animarlo, muestra el texto de golpe y desactiva el typeo
     if (!animate) {
       setDisplayedText(text);
       setIsTyping?.(false);
       return;
     }
-
-    //Vacía el texto y activa el typeo
-    indexRef.current = 0;
-    setDisplayedText("");
-    setIsTyping?.(true);
-
-    startTypingInterval(textSpeed);
 
     //Evita que haya intervalos "zombies" corriendo
     //NOTA: Se ejecuta antes de correr el useEffect o cuando se quita TypingText
@@ -83,7 +87,6 @@ function TypingText({
     if (!intervalRef.current) {
       return;
     }
-
     startTypingInterval(textSpeed);
   }, [textSpeed]);
 

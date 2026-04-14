@@ -54,12 +54,14 @@ function History({
 
         //Boolean que será true si el elemento ES el último y el lenguage NO ha cambiado
         const shouldAnimate = isLast && !languageChanged;
+        console.log("ENTRADA 1");
+        console.log("shouldAnimate", shouldAnimate, entry);
 
         if (entry.type === "scene") {
           const text = scenes[entry.sceneId].text[language];
 
           return (
-            <p key={index}>
+            <p key={entry.sceneId + index}>
               <TypingText
                 text={text}
                 animate={shouldAnimate}
