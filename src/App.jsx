@@ -78,7 +78,7 @@ function App() {
   );
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+    <div>
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor
