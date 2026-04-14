@@ -1,7 +1,6 @@
 # 🎮 The Final Question
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
@@ -21,7 +20,7 @@ I built this as a portfolio project, I wanted to create something more than anot
 
 ### ✍️ Authors
 
-**Keylor Calderón** — Junior Full Stack Developer [GitHub](https://github.com/KeylorCalderon)
+I am [Keylor Calderón](https://github.com/KeylorCalderon) and I created this tiny game as a personal project inspired by my passion for hard science fiction, cosmic horror, but especially, for the wonders of the universe.
 
 ## 🚀 Usage / How to Play
 
@@ -34,6 +33,8 @@ I built this as a portfolio project, I wanted to create something more than anot
 Try different paths, you can help them gently, act as a harsh judge, or ignore them completely.
 
 **Live Demo:** (WIP)
+
+## ⬇️ Installation
 
 ```bash
 ⬇️ Installation
@@ -56,5 +57,5 @@ npm run dev
 
 ## 💭 Feedback and Contributing
 
-This is my first big personal project after university, so every comment helps me improve and show growth to future employers.
+This is my first big personal project after university, so every comment helps me improve!
 Thank you for playing!
