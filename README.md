@@ -1,16 +1,60 @@
-# React + Vite
+# 🎮 The Final Question
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Currently, two official plugins are available:
+## 🌟 Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Immersive typing effect with customizable speed and skip option
+- Branching narrative with moral choices that affect the story
+- Beautiful sci-fi atmosphere with glitch effects, custom cursor and animated galaxy background
+- Bilingual support (English / Spanish)
+- Responsive UI with side panel for settings
 
-## React Compiler
+## ℹ️ Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**The Final Question** is an interactive text-based narrative game where you wake up as an observer forced to make god-like decisions over a civilization, the Jhunuh. Every choice has a cost in "lines" (your life force) and shapes the fate of an entire species.
 
-## Expanding the ESLint configuration
+I built this as a portfolio project, I wanted to create something more than another CRUD app, a story-driven experience. This project helped me practice React hooks, performance with typing animations, parsing styled text, and building engaging user interfaces.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✍️ Authors
+
+**Keylor Calderón** — Junior Full Stack Developer [GitHub](https://github.com/KeylorCalderon)
+
+## 🚀 Usage / How to Play
+
+1. Click **▶ PLAY** to begin
+2. Read the story as it types itself out, or click to skip
+3. Choose doors carefully, each one costs or gives "lines"
+4. Your decisions shape the ending of the Jhunuh civilization
+5. Use the ☰ panel to change language or text speed
+
+Try different paths, you can help them gently, act as a harsh judge, or ignore them completely.
+
+**Live Demo:** (WIP)
+
+```bash
+⬇️ Installation
+Prerequisites
+
+Node.js 18+
+npm or yarn
+# Clone the repo
+git clone https://github.com/KeylorCalderon/final-question-interactive-text-game.git
+
+# Go to the project folder
+cd final-question-interactive-text-game
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## 💭 Feedback and Contributing
+
+This is my first big personal project after university, so every comment helps me improve and show growth to future employers.
+Thank you for playing!
