@@ -33,5 +33,9 @@ export const narrationTranslations = {
   ending: {
     es: "FIN DE LA PARTIDA",
     en: "END OF THE GAME"
+  },
+  replay: {
+    es: "JUGAR DE NUEVO",
+    en: "PLAY AGAIN"
   }
 };

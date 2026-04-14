@@ -8,9 +8,17 @@ function Choices({ choices, onSelect, inventory, language, isTyping, lines }) {
   //Se alcanzó el fin de la historia
   if (!choices.length) {
     return (
-      <p className="ending-text">
-        <i>---{narrationTranslations.ending[language]}---</i>
-      </p>
+      <div className="ending-container">
+        <p className="ending-text">
+          <i>---{narrationTranslations.ending[language]}---</i>
+        </p>
+        <button
+          className="replay-btn cursor-target"
+          onClick={() => window.location.reload()}
+        >
+          {narrationTranslations.replay[language]}
+        </button>
+      </div>
     );
   }
 

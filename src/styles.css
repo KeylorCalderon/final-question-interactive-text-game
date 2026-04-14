@@ -120,6 +120,8 @@
   background: rgba(120, 160, 255, 0.3);
   box-shadow:
     0 0 35px rgba(80, 141, 255, 0.89);
+
+  transform: scale(1.15);
 }
 
 .choice-button.locked {
@@ -579,6 +581,48 @@ button {
   background: rgba(120, 160, 255, 0.3);
   box-shadow:
     0 0 35px rgba(80, 141, 255, 0.89);
+}
+
+.ending-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.choices .replay-btn {
+  margin-top: -8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 22px;
+
+  padding: 10px 20px;
+  border-radius: 14px;
+
+  width: 20%;
+  max-width: 400px;
+
+  background: rgba(120, 160, 255, 0.15);
+  color: #edeff7;
+
+  border: 1px solid rgba(120, 161, 255, 0.9);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 12px rgba(80, 141, 255, 0.8);
+
+  transition: all 0.25s ease;
+}
+
+.choices .replay-btn:hover {
+  background: rgba(255, 246, 120, 0.35);
+  box-shadow:
+    0 0 120px rgb(252, 255, 80);
+
+  transform: scale(1.5);
 }
 
 .ending-text {
