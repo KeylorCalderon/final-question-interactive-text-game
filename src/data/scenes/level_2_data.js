@@ -45,7 +45,7 @@ export const secondLevelScenes = {
         <i><entity>Después de todo…</entity></i>
         <i><entity>¿Deben sobrevivir… aunque nunca comprendan… o comprender… aunque no todos sobrevivan?</entity></i>
 
-        Se materializan tres puertas ante ti.
+        Se materializan dos puertas ante ti.
 
         Puerta Gris 1: Deben sobrevivir.
 
@@ -95,7 +95,7 @@ export const secondLevelScenes = {
         <i><entity>After all…</entity></i>
         <i><entity>Should they survive… even if they never understand… or understand… even if not all survive?</entity></i>
 
-        Three doors materialize before you.
+        Two doors materialize before you.
 
         Gray Door 1: They must survive.
 

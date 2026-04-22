@@ -156,7 +156,9 @@ function App() {
           <div className="start-links">
             <button
               className="start-link-btn cursor-target"
-              onClick={() => window.open("https://keylor-portfolio.vercel.app/", "_blank")}
+              onClick={() =>
+                window.open("https://keylor-portfolio.vercel.app/", "_blank")
+              }
             >
               About me
             </button>
