@@ -154,25 +154,22 @@ function App() {
             ▶ PLAY
           </button>
           <div className="start-links">
-            <button
+            <a
+              href="https://keylor-portfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="start-link-btn cursor-target"
-              onClick={() =>
-                window.open("https://keylor-portfolio.vercel.app/", "_blank")
-              }
             >
               About me
-            </button>
-            <button
+            </a>
+            <a
+              href="https://github.com/KeylorCalderon/final-question-interactive-text-game"
+              target="_blank"
+              rel="noopener noreferrer"
               className="start-link-btn cursor-target"
-              onClick={() =>
-                window.open(
-                  "https://github.com/KeylorCalderon/final-question-interactive-text-game",
-                  "_blank",
-                )
-              }
             >
               GitHub
-            </button>
+            </a>
           </div>
         </div>
       )}
