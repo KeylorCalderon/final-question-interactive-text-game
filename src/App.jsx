@@ -93,7 +93,7 @@ function App() {
 
   const scene = scenes[currentScene];
 
-  //Oculta las escenas no disponibles, esto funciona junto a la opción de dar items(Tampoco se usa en la historia actual)
+  //Oculta las escenas no disponibles, esto funciona junto a la opción de dar items (Tampoco se usa en la historia actual)
   const visibleChoices = scene.choices.filter(
     (choice) => !usedChoices.includes(choice.id),
   );
